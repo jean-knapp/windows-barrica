@@ -1,0 +1,174 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{DD81EE0C-5D91-4FF7-9684-3DB29BE62954}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>windows_theodolite</RootNamespace>
+    <AssemblyName>windows-theodolite</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>theodolite.ico</ApplicationIcon>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="DevExpress.BonusSkins.v20.2" />
+    <Reference Include="DevExpress.Data.Desktop.v20.2" />
+    <Reference Include="DevExpress.Data.v20.2" />
+    <Reference Include="DevExpress.Dialogs.v20.2.Core, Version=20.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Utils.v20.2" />
+    <Reference Include="DevExpress.Sparkline.v20.2.Core" />
+    <Reference Include="DevExpress.XtraBars.v20.2, Version=20.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraDialogs.v20.2, Version=20.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraEditors.v20.2" />
+    <Reference Include="DevExpress.Printing.v20.2.Core" />
+    <Reference Include="DevExpress.XtraGrid.v20.2, Version=20.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraLayout.v20.2, Version=20.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraTreeList.v20.2, Version=20.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="IronBarCode, Version=2021.6.3.0, Culture=neutral, PublicKeyToken=b971bb3971bdf306, processorArchitecture=MSIL">
+      <HintPath>..\packages\BarCode.2021.6.3\lib\net40\IronBarCode.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Forms\Export\ExportQRCodeForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Export\ExportQRCodeForm.Designer.cs">
+      <DependentUpon>ExportQRCodeForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Import\ImportQRCodeForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Import\ImportQRCodeForm.Designer.cs">
+      <DependentUpon>ImportQRCodeForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Settings\ModeSettingsForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Settings\ModeSettingsForm.Designer.cs">
+      <DependentUpon>ModeSettingsForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Sorties\CheckInForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Sorties\CheckInForm.Designer.cs">
+      <DependentUpon>CheckInForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\MainForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\MainForm.Designer.cs">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Forms\Settings\RangeSettingsForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Settings\RangeSettingsForm.Designer.cs">
+      <DependentUpon>RangeSettingsForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Directories.cs" />
+    <Compile Include="StringCipher.cs" />
+    <EmbeddedResource Include="Forms\Export\ExportQRCodeForm.resx">
+      <DependentUpon>ExportQRCodeForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Import\ImportQRCodeForm.resx">
+      <DependentUpon>ImportQRCodeForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Settings\ModeSettingsForm.resx">
+      <DependentUpon>ModeSettingsForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Sorties\CheckInForm.resx">
+      <DependentUpon>CheckInForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\MainForm.resx">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\licenses.licx" />
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="Forms\Settings\RangeSettingsForm.resx">
+      <DependentUpon>RangeSettingsForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="App.config" />
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\rangeBackground.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\excel.png" />
+    <None Include="Resources\csv.png" />
+    <None Include="Resources\qr-code.png" />
+    <None Include="Resources\Open.svg" />
+    <None Include="Resources\Save.svg" />
+    <None Include="Resources\exit%281%29.png" />
+    <None Include="Resources\check-in-desk.png" />
+    <None Include="Resources\theodolite.png" />
+    <None Include="Resources\bombs.png" />
+    <Content Include="theodolite.ico" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it.
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
