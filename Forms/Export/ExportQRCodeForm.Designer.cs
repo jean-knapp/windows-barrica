@@ -67,7 +67,7 @@ namespace windows_theodolite.Forms.Export
             this.labelControl2.Name = "labelControl2";
             this.labelControl2.Size = new System.Drawing.Size(435, 46);
             this.labelControl2.TabIndex = 2;
-            this.labelControl2.Text = "Take a picture of this QR Code and set it to your weapons officer.";
+            this.labelControl2.Text = "Take a picture of this QR Code and send it to your weapons officer.";
             // 
             // qrCodeEdit
             // 
