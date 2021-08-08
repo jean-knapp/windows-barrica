@@ -46,9 +46,9 @@ namespace windows_theodolite.Forms.Export
             this.fileNameLabel.Appearance.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
             this.fileNameLabel.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.Vertical;
             this.fileNameLabel.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.fileNameLabel.Location = new System.Drawing.Point(8, 410);
+            this.fileNameLabel.Location = new System.Drawing.Point(8, 799);
             this.fileNameLabel.Name = "fileNameLabel";
-            this.fileNameLabel.Size = new System.Drawing.Size(435, 29);
+            this.fileNameLabel.Size = new System.Drawing.Size(768, 29);
             this.fileNameLabel.TabIndex = 1;
             this.fileNameLabel.Text = "File name";
             // 
@@ -65,31 +65,31 @@ namespace windows_theodolite.Forms.Export
             this.labelControl2.Dock = System.Windows.Forms.DockStyle.Top;
             this.labelControl2.Location = new System.Drawing.Point(8, 8);
             this.labelControl2.Name = "labelControl2";
-            this.labelControl2.Size = new System.Drawing.Size(435, 46);
+            this.labelControl2.Size = new System.Drawing.Size(768, 23);
             this.labelControl2.TabIndex = 2;
             this.labelControl2.Text = "Take a picture of this QR Code and send it to your weapons officer.";
             // 
             // qrCodeEdit
             // 
             this.qrCodeEdit.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.qrCodeEdit.Location = new System.Drawing.Point(8, 54);
+            this.qrCodeEdit.Location = new System.Drawing.Point(8, 31);
             this.qrCodeEdit.Name = "qrCodeEdit";
             this.qrCodeEdit.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
             this.qrCodeEdit.Properties.ShowCameraMenuItem = DevExpress.XtraEditors.Controls.CameraMenuItemVisibility.Auto;
             this.qrCodeEdit.Properties.ShowMenu = false;
             this.qrCodeEdit.Properties.SizeMode = DevExpress.XtraEditors.Controls.PictureSizeMode.Zoom;
-            this.qrCodeEdit.Size = new System.Drawing.Size(435, 356);
+            this.qrCodeEdit.Size = new System.Drawing.Size(768, 768);
             this.qrCodeEdit.TabIndex = 3;
             // 
             // ExportQRCodeForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(451, 447);
+            this.ClientSize = new System.Drawing.Size(784, 836);
             this.Controls.Add(this.qrCodeEdit);
             this.Controls.Add(this.labelControl2);
             this.Controls.Add(this.fileNameLabel);
-            this.MinimumSize = new System.Drawing.Size(256, 256);
+            this.MinimumSize = new System.Drawing.Size(786, 868);
             this.Name = "ExportQRCodeForm";
             this.Padding = new System.Windows.Forms.Padding(8);
             this.Text = "Export QR Code";

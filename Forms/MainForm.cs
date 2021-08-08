@@ -2,7 +2,6 @@
 using DevExpress.XtraBars.Ribbon;
 using DevExpress.XtraEditors;
 using DevExpress.XtraTreeList.Nodes;
-using IronBarCode;
 using System;
 using System.Collections.Generic;
 using System.Diagnostics;
@@ -494,15 +493,12 @@ namespace windows_theodolite.Forms
                     {
                         CheckOut();
 
-          
-                        BarcodeResult barcode = BarcodeReader.ReadASingleBarcode(qrCode);
-                        if (barcode == null)
-                        {
-                            XtraMessageBox.Show("The selected image is not a valid QR Code.");
-                            return;
-                        }
-                        string cipher = barcode.Text;
-                        string compressedData = StringCipher.Decrypt(cipher, Properties.Settings.Default.EncryptionWord);
+                        string cipher = "";
+
+                            cipher = ExportQRCodeForm.readQRCode((Bitmap)qrCode);
+
+
+                        string compressedData = (Properties.Settings.Default.EncryptionWord != "" ? StringCipher.Decrypt(cipher, Properties.Settings.Default.EncryptionWord) : cipher);
 
                         if (compressedData == "")
                         {

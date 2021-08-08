@@ -241,8 +241,8 @@ namespace windows_theodolite.Forms
             // 
             // backstage
             // 
-            this.backstage.Controls.Add(this.backstageViewClientControl2);
             this.backstage.Controls.Add(this.backstageViewClientControl1);
+            this.backstage.Controls.Add(this.backstageViewClientControl2);
             this.backstage.Items.Add(this.backstageOpenItem);
             this.backstage.Items.Add(this.backstageSaveItem);
             this.backstage.Items.Add(this.backstageViewItemSeparator1);
@@ -260,9 +260,9 @@ namespace windows_theodolite.Forms
             // backstageViewClientControl2
             // 
             this.backstageViewClientControl2.Controls.Add(this.recentItemControl2);
-            this.backstageViewClientControl2.Location = new System.Drawing.Point(132, 63);
+            this.backstageViewClientControl2.Location = new System.Drawing.Point(132, 62);
             this.backstageViewClientControl2.Name = "backstageViewClientControl2";
-            this.backstageViewClientControl2.Size = new System.Drawing.Size(279, 265);
+            this.backstageViewClientControl2.Size = new System.Drawing.Size(280, 267);
             this.backstageViewClientControl2.TabIndex = 2;
             // 
             // recentItemControl2
@@ -274,7 +274,7 @@ namespace windows_theodolite.Forms
             this.recentItemControl2.MainPanel = this.recentStackPanel3;
             this.recentItemControl2.Name = "recentItemControl2";
             this.recentItemControl2.SelectedTab = null;
-            this.recentItemControl2.Size = new System.Drawing.Size(370, 265);
+            this.recentItemControl2.Size = new System.Drawing.Size(370, 267);
             this.recentItemControl2.TabIndex = 0;
             this.recentItemControl2.Title = "Save";
             // 

@@ -1,8 +1,8 @@
-﻿using IronBarCode;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Drawing;
 using System.Linq;
+using ZXing;
 
 namespace windows_theodolite.Forms.Export
 {
@@ -33,9 +33,9 @@ namespace windows_theodolite.Forms.Export
 
             string text = CompressData(lines);
 
-            string cipher = StringCipher.Encrypt(text, Properties.Settings.Default.EncryptionWord);
+            string cipher = (Properties.Settings.Default.EncryptionWord != "" ? StringCipher.Encrypt(text, Properties.Settings.Default.EncryptionWord) : text);
 
-            Image qrCode = BarcodeWriter.CreateBarcode(cipher, BarcodeWriterEncoding.QRCode).Image;
+            Bitmap qrCode = writeQRCode(cipher);
 
             if (qrCodeEdit.Image != null)
                 qrCodeEdit.Image.Dispose();
@@ -157,6 +157,22 @@ namespace windows_theodolite.Forms.Export
             lines.Insert(0,"Pilot,Tail Number,Mode,Heading,Date/Time,Primary flag,Secondary flag,Distance,Position,Hits,Comments");
 
             return lines;
+        }
+
+        public static Bitmap writeQRCode(string text)
+        {
+            var bw = new ZXing.BarcodeWriter();
+            var encOptions = new ZXing.Common.EncodingOptions() { Width = 1024, Height = 1024, Margin = 0 };
+            bw.Options = encOptions;
+            bw.Format = ZXing.BarcodeFormat.QR_CODE;
+            var result = new Bitmap(bw.Write(text));
+            return result;
+        }
+
+        public static string readQRCode(Bitmap bitmap)
+        {
+            BarcodeReader barcode = new BarcodeReader();
+            return barcode.Decode(bitmap).ToString();
         }
 
         private void qrCodeEdit_ImageChanged(object sender, System.EventArgs e)
