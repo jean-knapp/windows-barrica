@@ -79,6 +79,16 @@ namespace windows_theodolite.Forms
 
             (float distance, float direction) = getDistanceAndPosition(primaryFlag, secondaryFlag);
 
+            if (validFlags)
+            {
+                direction -= (heading - defaultHeading) / 30;
+                if (direction >= 13)
+                    direction -= 12;
+
+                if (direction < 1)
+                    direction += 12;
+            }
+
             string comments = commentsEdit.EditValue.ToString();
 
             primaryFlagEdit.EditValue = "";
@@ -412,12 +422,21 @@ namespace windows_theodolite.Forms
         {
             string primaryFlagStr = e.Node["primaryFlag"]?.ToString();
             string secondaryFlagStr = e.Node["secondaryFlag"]?.ToString();
+            string headingStr = e.Node["heading"]?.ToString();
 
             //System.Diagnostics.Debugger.Break();
 
-            if (primaryFlagStr != "" && secondaryFlagStr != "" && int.TryParse(primaryFlagStr, out int primaryflag) && int.TryParse(secondaryFlagStr, out int secondaryFlag))
+            if (primaryFlagStr != "" && secondaryFlagStr != "" && headingStr != "" && int.TryParse(primaryFlagStr, out int primaryflag) && int.TryParse(secondaryFlagStr, out int secondaryFlag) && int.TryParse(headingStr, out int heading))
             {
                 (float distance, float direction) = getDistanceAndPosition(primaryflag, secondaryFlag);
+
+
+                direction -= (heading - defaultHeading) / 30;
+                if (direction >= 13)
+                    direction -= 12;
+
+                if (direction < 1)
+                    direction += 12;
 
                 e.Node["distance"] = distance.ToString();
                 e.Node["direction"] = direction.ToString();

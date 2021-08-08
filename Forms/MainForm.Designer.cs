@@ -247,7 +247,7 @@ namespace windows_theodolite.Forms
             this.backstage.Items.Add(this.backstageSaveItem);
             this.backstage.Items.Add(this.backstageViewItemSeparator1);
             this.backstage.Items.Add(this.backstageExitItem);
-            this.backstage.Location = new System.Drawing.Point(179, 164);
+            this.backstage.Location = new System.Drawing.Point(168, 136);
             this.backstage.Name = "backstage";
             this.backstage.OwnerControl = this.ribbon;
             this.backstage.SelectedTab = this.backstageSaveItem;
