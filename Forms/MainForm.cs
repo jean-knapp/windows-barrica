@@ -493,12 +493,13 @@ namespace windows_theodolite.Forms
                     {
                         CheckOut();
 
-                        string cipher = "";
+                        string cipher = ExportQRCodeForm.readQRCode((Bitmap)qrCode);
+                        string compressedData = "";
 
-                            cipher = ExportQRCodeForm.readQRCode((Bitmap)qrCode);
-
-
-                        string compressedData = (Properties.Settings.Default.EncryptionWord != "" ? StringCipher.Decrypt(cipher, Properties.Settings.Default.EncryptionWord) : cipher);
+                        if (cipher != null)
+                        {
+                            compressedData = (Properties.Settings.Default.EncryptionWord != "" ? StringCipher.Decrypt(cipher, Properties.Settings.Default.EncryptionWord) : cipher);
+                        }
 
                         if (compressedData == "")
                         {

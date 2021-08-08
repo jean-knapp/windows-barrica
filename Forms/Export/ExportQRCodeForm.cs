@@ -172,7 +172,7 @@ namespace windows_theodolite.Forms.Export
         public static string readQRCode(Bitmap bitmap)
         {
             BarcodeReader barcode = new BarcodeReader();
-            return barcode.Decode(bitmap).ToString();
+            return barcode.Decode(bitmap)?.ToString();
         }
 
         private void qrCodeEdit_ImageChanged(object sender, System.EventArgs e)
