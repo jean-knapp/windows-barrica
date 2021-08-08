@@ -413,6 +413,17 @@ namespace windows_theodolite.Forms
                 if (cells[5] != "" && cells[6] != "")
                     (distance, direction) = getDistanceAndPosition(int.Parse(cells[5]), int.Parse(cells[6]));
 
+                float heading = defaultHeading;
+                if (cells[3] != "")
+                    heading = int.Parse(cells[3]);
+
+                direction -= (heading - defaultHeading) / 30;
+                if (direction >= 13)
+                    direction -= 12;
+
+                if (direction < 1)
+                    direction += 12;
+
                 employmentsTree.AppendNode(new object[] { cells[4], cells[0], cells[1], cells[3], cells[2], (cells[5] != "" ? cells[5] : ""), (cells[6] != "" ? cells[6] : ""), (cells[5] != "" && cells[6] != "" ? distance.ToString() : ""), (cells[5] != "" && cells[6] != "" ? direction.ToString() : ""), (cells[9] != "" ? cells[9] : ""), cells[10] }, null);
             }
             employmentsTree.EndUnboundLoad();

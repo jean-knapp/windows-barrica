@@ -250,8 +250,8 @@ namespace windows_theodolite.Forms
             this.backstage.Location = new System.Drawing.Point(168, 136);
             this.backstage.Name = "backstage";
             this.backstage.OwnerControl = this.ribbon;
-            this.backstage.SelectedTab = this.backstageSaveItem;
-            this.backstage.SelectedTabIndex = 1;
+            this.backstage.SelectedTab = this.backstageOpenItem;
+            this.backstage.SelectedTabIndex = 0;
             this.backstage.Size = new System.Drawing.Size(412, 329);
             this.backstage.TabIndex = 34;
             this.backstage.VisibleInDesignTime = true;
@@ -320,9 +320,9 @@ namespace windows_theodolite.Forms
             // backstageViewClientControl1
             // 
             this.backstageViewClientControl1.Controls.Add(this.recentItemControl1);
-            this.backstageViewClientControl1.Location = new System.Drawing.Point(132, 62);
+            this.backstageViewClientControl1.Location = new System.Drawing.Point(132, 63);
             this.backstageViewClientControl1.Name = "backstageViewClientControl1";
-            this.backstageViewClientControl1.Size = new System.Drawing.Size(280, 267);
+            this.backstageViewClientControl1.Size = new System.Drawing.Size(279, 265);
             this.backstageViewClientControl1.TabIndex = 1;
             // 
             // recentItemControl1
@@ -334,7 +334,7 @@ namespace windows_theodolite.Forms
             this.recentItemControl1.MainPanel = this.recentStackPanel1;
             this.recentItemControl1.Name = "recentItemControl1";
             this.recentItemControl1.SelectedTab = this.openRecentButton;
-            this.recentItemControl1.Size = new System.Drawing.Size(370, 267);
+            this.recentItemControl1.Size = new System.Drawing.Size(370, 265);
             this.recentItemControl1.TabIndex = 0;
             this.recentItemControl1.Title = "Open";
             // 
@@ -392,13 +392,13 @@ namespace windows_theodolite.Forms
             this.backstageOpenItem.Caption = "Open";
             this.backstageOpenItem.ContentControl = this.backstageViewClientControl1;
             this.backstageOpenItem.Name = "backstageOpenItem";
+            this.backstageOpenItem.Selected = true;
             // 
             // backstageSaveItem
             // 
             this.backstageSaveItem.Caption = "Save";
             this.backstageSaveItem.ContentControl = this.backstageViewClientControl2;
             this.backstageSaveItem.Name = "backstageSaveItem";
-            this.backstageSaveItem.Selected = true;
             // 
             // backstageViewItemSeparator1
             // 
