@@ -15,19 +15,30 @@ namespace windows_theodolite.Forms.Settings
 {
     public partial class ModeSettingsForm : DevExpress.XtraEditors.XtraForm
     {
+        public static List<string> GetModes()
+        {
+            List<string> result = new List<string>();
+            if (File.Exists(Directories.UserDirectory + "modes.csv"))
+            {
+                foreach (string mode in File.ReadAllLines(Directories.UserDirectory + "modes.csv"))
+                {
+                    result.Add(mode);
+                }
+            }
+
+            return result;
+        }
+
         public ModeSettingsForm()
         {
             InitializeComponent();
 
-            if (File.Exists(Directories.UserDirectory + "modes.csv"))
+            modesTree.BeginUnboundLoad();
+            foreach (string mode in GetModes())
             {
-                modesTree.BeginUnboundLoad();
-                foreach (string mode in File.ReadAllLines(Directories.UserDirectory + "modes.csv"))
-                {
-                    modesTree.AppendNode(new object[] { mode }, null);
-                }
-                modesTree.EndUnboundLoad();
+                modesTree.AppendNode(new object[] { mode }, null);
             }
+            modesTree.EndUnboundLoad();
         }
 
         private void removeButton_Click(object sender, EventArgs e)

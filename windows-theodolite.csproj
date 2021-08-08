@@ -9,9 +9,24 @@
     <OutputType>WinExe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>windows_theodolite</RootNamespace>
-    <AssemblyName>windows-theodolite</AssemblyName>
+    <AssemblyName>Knapp Air-to-Surface Impact Measurer</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -35,6 +50,7 @@
   <PropertyGroup>
     <ApplicationIcon>theodolite.ico</ApplicationIcon>
   </PropertyGroup>
+  <PropertyGroup />
   <ItemGroup>
     <Reference Include="DevExpress.BonusSkins.v20.2" />
     <Reference Include="DevExpress.Data.Desktop.v20.2" />
@@ -73,12 +89,6 @@
     <Compile Include="Forms\Export\ExportQRCodeForm.Designer.cs">
       <DependentUpon>ExportQRCodeForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\Import\ImportQRCodeForm.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Forms\Import\ImportQRCodeForm.Designer.cs">
-      <DependentUpon>ImportQRCodeForm.cs</DependentUpon>
-    </Compile>
     <Compile Include="Forms\Settings\ModeSettingsForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -109,9 +119,6 @@
     <Compile Include="StringCipher.cs" />
     <EmbeddedResource Include="Forms\Export\ExportQRCodeForm.resx">
       <DependentUpon>ExportQRCodeForm.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Forms\Import\ImportQRCodeForm.resx">
-      <DependentUpon>ImportQRCodeForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\Settings\ModeSettingsForm.resx">
       <DependentUpon>ModeSettingsForm.cs</DependentUpon>
@@ -163,7 +170,31 @@
     <None Include="Resources\bombs.png" />
     <Content Include="theodolite.ico" />
   </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.7.2">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.7.2 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PostBuildEvent>RD /S /Q "$(TargetDir)de"
+RD /S /Q "$(TargetDir)es"
+RD /S /Q "$(TargetDir)ja"
+RD /S /Q "$(TargetDir)ru"
+ROBOCOPY "$(TargetDir) " "$(TargetDir)Libs\ " /XF "Knapp Air-to-Surface Impact Measurer.exe" *.config /XD Libs /E /IS /MOVE
+del "$(TargetDir)Libs\*.pdb"
+del "$(TargetDir)Libs\*.xml"
+del "$(TargetDir)Libs\readme.txt"
+del "$(TargetDir)Libs\license.txt"
+; if %25errorlevel%25 leq 4 exit 0 else exit %25errorlevel%25</PostBuildEvent>
+  </PropertyGroup>
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it.
        Other similar extension points exist, see Microsoft.Common.targets.
   <Target Name="BeforeBuild">

@@ -31,14 +31,68 @@ namespace windows_theodolite.Forms
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
+            DevExpress.Utils.SuperToolTip superToolTip1 = new DevExpress.Utils.SuperToolTip();
+            DevExpress.Utils.ToolTipTitleItem toolTipTitleItem1 = new DevExpress.Utils.ToolTipTitleItem();
+            DevExpress.Utils.ToolTipItem toolTipItem1 = new DevExpress.Utils.ToolTipItem();
+            DevExpress.Utils.ToolTipSeparatorItem toolTipSeparatorItem1 = new DevExpress.Utils.ToolTipSeparatorItem();
+            DevExpress.Utils.ToolTipItem toolTipItem2 = new DevExpress.Utils.ToolTipItem();
+            DevExpress.Utils.SuperToolTip superToolTip2 = new DevExpress.Utils.SuperToolTip();
+            DevExpress.Utils.ToolTipTitleItem toolTipTitleItem2 = new DevExpress.Utils.ToolTipTitleItem();
+            DevExpress.Utils.ToolTipItem toolTipItem3 = new DevExpress.Utils.ToolTipItem();
+            DevExpress.Utils.ToolTipSeparatorItem toolTipSeparatorItem2 = new DevExpress.Utils.ToolTipSeparatorItem();
+            DevExpress.Utils.ToolTipItem toolTipItem4 = new DevExpress.Utils.ToolTipItem();
+            DevExpress.Utils.SuperToolTip superToolTip3 = new DevExpress.Utils.SuperToolTip();
+            DevExpress.Utils.ToolTipTitleItem toolTipTitleItem3 = new DevExpress.Utils.ToolTipTitleItem();
+            DevExpress.Utils.ToolTipItem toolTipItem5 = new DevExpress.Utils.ToolTipItem();
+            DevExpress.Utils.ToolTipSeparatorItem toolTipSeparatorItem3 = new DevExpress.Utils.ToolTipSeparatorItem();
+            DevExpress.Utils.ToolTipItem toolTipItem6 = new DevExpress.Utils.ToolTipItem();
+            DevExpress.Utils.SuperToolTip superToolTip4 = new DevExpress.Utils.SuperToolTip();
+            DevExpress.Utils.ToolTipTitleItem toolTipTitleItem4 = new DevExpress.Utils.ToolTipTitleItem();
+            DevExpress.Utils.ToolTipItem toolTipItem7 = new DevExpress.Utils.ToolTipItem();
+            DevExpress.Utils.ToolTipSeparatorItem toolTipSeparatorItem4 = new DevExpress.Utils.ToolTipSeparatorItem();
+            DevExpress.Utils.ToolTipItem toolTipItem8 = new DevExpress.Utils.ToolTipItem();
+            DevExpress.Utils.SuperToolTip superToolTip5 = new DevExpress.Utils.SuperToolTip();
+            DevExpress.Utils.ToolTipTitleItem toolTipTitleItem5 = new DevExpress.Utils.ToolTipTitleItem();
+            DevExpress.Utils.ToolTipItem toolTipItem9 = new DevExpress.Utils.ToolTipItem();
+            DevExpress.Utils.ToolTipItem toolTipItem10 = new DevExpress.Utils.ToolTipItem();
+            DevExpress.Utils.SuperToolTip superToolTip6 = new DevExpress.Utils.SuperToolTip();
+            DevExpress.Utils.ToolTipTitleItem toolTipTitleItem6 = new DevExpress.Utils.ToolTipTitleItem();
+            DevExpress.Utils.ToolTipItem toolTipItem11 = new DevExpress.Utils.ToolTipItem();
+            DevExpress.Utils.ToolTipItem toolTipItem12 = new DevExpress.Utils.ToolTipItem();
+            DevExpress.Utils.ToolTipItem toolTipItem13 = new DevExpress.Utils.ToolTipItem();
+            DevExpress.Utils.ToolTipSeparatorItem toolTipSeparatorItem5 = new DevExpress.Utils.ToolTipSeparatorItem();
+            DevExpress.Utils.ToolTipItem toolTipItem14 = new DevExpress.Utils.ToolTipItem();
+            DevExpress.Utils.ToolTipSeparatorItem toolTipSeparatorItem6 = new DevExpress.Utils.ToolTipSeparatorItem();
+            DevExpress.Utils.ToolTipItem toolTipItem15 = new DevExpress.Utils.ToolTipItem();
+            DevExpress.Utils.SuperToolTip superToolTip7 = new DevExpress.Utils.SuperToolTip();
+            DevExpress.Utils.ToolTipTitleItem toolTipTitleItem7 = new DevExpress.Utils.ToolTipTitleItem();
+            DevExpress.Utils.ToolTipItem toolTipItem16 = new DevExpress.Utils.ToolTipItem();
+            DevExpress.Utils.SuperToolTip superToolTip8 = new DevExpress.Utils.SuperToolTip();
+            DevExpress.Utils.ToolTipTitleItem toolTipTitleItem8 = new DevExpress.Utils.ToolTipTitleItem();
+            DevExpress.Utils.ToolTipItem toolTipItem17 = new DevExpress.Utils.ToolTipItem();
+            DevExpress.Utils.SuperToolTip superToolTip9 = new DevExpress.Utils.SuperToolTip();
+            DevExpress.Utils.ToolTipTitleItem toolTipTitleItem9 = new DevExpress.Utils.ToolTipTitleItem();
+            DevExpress.Utils.ToolTipItem toolTipItem18 = new DevExpress.Utils.ToolTipItem();
+            DevExpress.Utils.SuperToolTip superToolTip10 = new DevExpress.Utils.SuperToolTip();
+            DevExpress.Utils.ToolTipTitleItem toolTipTitleItem10 = new DevExpress.Utils.ToolTipTitleItem();
+            DevExpress.Utils.ToolTipItem toolTipItem19 = new DevExpress.Utils.ToolTipItem();
+            DevExpress.Utils.SuperToolTip superToolTip11 = new DevExpress.Utils.SuperToolTip();
+            DevExpress.Utils.ToolTipTitleItem toolTipTitleItem11 = new DevExpress.Utils.ToolTipTitleItem();
+            DevExpress.Utils.ToolTipItem toolTipItem20 = new DevExpress.Utils.ToolTipItem();
+            DevExpress.Utils.SuperToolTip superToolTip12 = new DevExpress.Utils.SuperToolTip();
+            DevExpress.Utils.ToolTipTitleItem toolTipTitleItem12 = new DevExpress.Utils.ToolTipTitleItem();
+            DevExpress.Utils.ToolTipItem toolTipItem21 = new DevExpress.Utils.ToolTipItem();
+            DevExpress.Utils.SuperToolTip superToolTip13 = new DevExpress.Utils.SuperToolTip();
+            DevExpress.Utils.ToolTipTitleItem toolTipTitleItem13 = new DevExpress.Utils.ToolTipTitleItem();
+            DevExpress.Utils.ToolTipItem toolTipItem22 = new DevExpress.Utils.ToolTipItem();
+            DevExpress.Utils.SuperToolTip superToolTip14 = new DevExpress.Utils.SuperToolTip();
+            DevExpress.Utils.ToolTipTitleItem toolTipTitleItem14 = new DevExpress.Utils.ToolTipTitleItem();
+            DevExpress.Utils.ToolTipItem toolTipItem23 = new DevExpress.Utils.ToolTipItem();
+            DevExpress.Utils.SuperToolTip superToolTip15 = new DevExpress.Utils.SuperToolTip();
+            DevExpress.Utils.ToolTipTitleItem toolTipTitleItem15 = new DevExpress.Utils.ToolTipTitleItem();
+            DevExpress.Utils.ToolTipItem toolTipItem24 = new DevExpress.Utils.ToolTipItem();
             this.ribbon = new DevExpress.XtraBars.Ribbon.RibbonControl();
             this.backstage = new DevExpress.XtraBars.Ribbon.BackstageViewControl();
-            this.backstageViewClientControl1 = new DevExpress.XtraBars.Ribbon.BackstageViewClientControl();
-            this.recentItemControl1 = new DevExpress.XtraBars.Ribbon.RecentItemControl();
-            this.recentStackPanel2 = new DevExpress.XtraBars.Ribbon.RecentStackPanel();
-            this.recentStackPanel1 = new DevExpress.XtraBars.Ribbon.RecentStackPanel();
-            this.openCSVButton = new DevExpress.XtraBars.Ribbon.RecentPinItem();
-            this.openQRCodeButton = new DevExpress.XtraBars.Ribbon.RecentPinItem();
             this.backstageViewClientControl2 = new DevExpress.XtraBars.Ribbon.BackstageViewClientControl();
             this.recentItemControl2 = new DevExpress.XtraBars.Ribbon.RecentItemControl();
             this.recentStackPanel4 = new DevExpress.XtraBars.Ribbon.RecentStackPanel();
@@ -46,6 +100,15 @@ namespace windows_theodolite.Forms
             this.saveCSVButton = new DevExpress.XtraBars.Ribbon.RecentPinItem();
             this.saveExcelButton = new DevExpress.XtraBars.Ribbon.RecentPinItem();
             this.saveQRCodeButton = new DevExpress.XtraBars.Ribbon.RecentPinItem();
+            this.backstageViewClientControl1 = new DevExpress.XtraBars.Ribbon.BackstageViewClientControl();
+            this.recentItemControl1 = new DevExpress.XtraBars.Ribbon.RecentItemControl();
+            this.recentStackPanel2 = new DevExpress.XtraBars.Ribbon.RecentStackPanel();
+            this.recentStackPanel1 = new DevExpress.XtraBars.Ribbon.RecentStackPanel();
+            this.openRecentButton = new DevExpress.XtraBars.Ribbon.RecentTabItem();
+            this.openRecentTab = new DevExpress.XtraBars.Ribbon.RecentStackPanel();
+            this.recentSeparatorItem1 = new DevExpress.XtraBars.Ribbon.RecentSeparatorItem();
+            this.openCSVButton = new DevExpress.XtraBars.Ribbon.RecentPinItem();
+            this.openQRCodeButton = new DevExpress.XtraBars.Ribbon.RecentPinItem();
             this.backstageOpenItem = new DevExpress.XtraBars.Ribbon.BackstageViewTabItem();
             this.backstageSaveItem = new DevExpress.XtraBars.Ribbon.BackstageViewTabItem();
             this.backstageViewItemSeparator1 = new DevExpress.XtraBars.Ribbon.BackstageViewItemSeparator();
@@ -55,10 +118,15 @@ namespace windows_theodolite.Forms
             this.barStaticItem1 = new DevExpress.XtraBars.BarStaticItem();
             this.rangeSettingsButton = new DevExpress.XtraBars.BarButtonItem();
             this.modeSettingsButton = new DevExpress.XtraBars.BarButtonItem();
+            this.barEditItem1 = new DevExpress.XtraBars.BarEditItem();
+            this.repositoryItemToggleSwitch1 = new DevExpress.XtraEditors.Repository.RepositoryItemToggleSwitch();
+            this.passwordEdit = new DevExpress.XtraBars.BarEditItem();
+            this.repositoryItemTextEdit1 = new DevExpress.XtraEditors.Repository.RepositoryItemTextEdit();
             this.ribbonPage1 = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.sortiesGroup = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.ribbonPage2 = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.settingsGroup = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
+            this.ribbonPageGroup1 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.repositoryItemSpinEdit1 = new DevExpress.XtraEditors.Repository.RepositoryItemSpinEdit();
             this.repositoryItemSpinEdit2 = new DevExpress.XtraEditors.Repository.RepositoryItemSpinEdit();
             this.repositoryItemSpinEdit3 = new DevExpress.XtraEditors.Repository.RepositoryItemSpinEdit();
@@ -106,10 +174,12 @@ namespace windows_theodolite.Forms
             ((System.ComponentModel.ISupportInitialize)(this.ribbon)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.backstage)).BeginInit();
             this.backstage.SuspendLayout();
-            this.backstageViewClientControl1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.recentItemControl1)).BeginInit();
             this.backstageViewClientControl2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.recentItemControl2)).BeginInit();
+            this.backstageViewClientControl1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.recentItemControl1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemToggleSwitch1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemTextEdit1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemSpinEdit1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemSpinEdit2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemSpinEdit3)).BeginInit();
@@ -147,94 +217,52 @@ namespace windows_theodolite.Forms
             this.sortiesCheckOutButton,
             this.barStaticItem1,
             this.rangeSettingsButton,
-            this.modeSettingsButton});
+            this.modeSettingsButton,
+            this.barEditItem1,
+            this.passwordEdit});
             this.ribbon.Location = new System.Drawing.Point(0, 0);
-            this.ribbon.MaxItemId = 13;
+            this.ribbon.MaxItemId = 15;
             this.ribbon.Name = "ribbon";
             this.ribbon.Pages.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPage[] {
             this.ribbonPage1,
             this.ribbonPage2});
+            this.ribbon.QuickToolbarItemLinks.Add(this.barEditItem1);
             this.ribbon.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] {
             this.repositoryItemSpinEdit1,
             this.repositoryItemSpinEdit2,
-            this.repositoryItemSpinEdit3});
+            this.repositoryItemSpinEdit3,
+            this.repositoryItemToggleSwitch1,
+            this.repositoryItemTextEdit1});
             this.ribbon.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonControlStyle.Office2019;
             this.ribbon.ShowApplicationButton = DevExpress.Utils.DefaultBoolean.True;
             this.ribbon.ShowSearchItem = true;
-            this.ribbon.Size = new System.Drawing.Size(642, 158);
+            this.ribbon.Size = new System.Drawing.Size(640, 158);
             this.ribbon.StatusBar = this.ribbonStatusBar;
             // 
             // backstage
             // 
-            this.backstage.Controls.Add(this.backstageViewClientControl1);
             this.backstage.Controls.Add(this.backstageViewClientControl2);
+            this.backstage.Controls.Add(this.backstageViewClientControl1);
             this.backstage.Items.Add(this.backstageOpenItem);
             this.backstage.Items.Add(this.backstageSaveItem);
             this.backstage.Items.Add(this.backstageViewItemSeparator1);
             this.backstage.Items.Add(this.backstageExitItem);
-            this.backstage.Location = new System.Drawing.Point(154, 190);
+            this.backstage.Location = new System.Drawing.Point(179, 164);
             this.backstage.Name = "backstage";
             this.backstage.OwnerControl = this.ribbon;
-            this.backstage.SelectedTab = this.backstageOpenItem;
-            this.backstage.SelectedTabIndex = 0;
-            this.backstage.Size = new System.Drawing.Size(442, 274);
+            this.backstage.SelectedTab = this.backstageSaveItem;
+            this.backstage.SelectedTabIndex = 1;
+            this.backstage.Size = new System.Drawing.Size(412, 329);
             this.backstage.TabIndex = 34;
             this.backstage.VisibleInDesignTime = true;
-            // 
-            // backstageViewClientControl1
-            // 
-            this.backstageViewClientControl1.Controls.Add(this.recentItemControl1);
-            this.backstageViewClientControl1.Location = new System.Drawing.Point(132, 63);
-            this.backstageViewClientControl1.Name = "backstageViewClientControl1";
-            this.backstageViewClientControl1.Size = new System.Drawing.Size(309, 210);
-            this.backstageViewClientControl1.TabIndex = 1;
-            // 
-            // recentItemControl1
-            // 
-            this.recentItemControl1.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
-            this.recentItemControl1.DefaultContentPanel = this.recentStackPanel2;
-            this.recentItemControl1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.recentItemControl1.Location = new System.Drawing.Point(0, 0);
-            this.recentItemControl1.MainPanel = this.recentStackPanel1;
-            this.recentItemControl1.Name = "recentItemControl1";
-            this.recentItemControl1.SelectedTab = null;
-            this.recentItemControl1.Size = new System.Drawing.Size(370, 210);
-            this.recentItemControl1.TabIndex = 0;
-            this.recentItemControl1.Title = "Open";
-            // 
-            // recentStackPanel2
-            // 
-            this.recentStackPanel2.Name = "recentStackPanel2";
-            // 
-            // recentStackPanel1
-            // 
-            this.recentStackPanel1.Items.AddRange(new DevExpress.XtraBars.Ribbon.RecentItemBase[] {
-            this.openCSVButton,
-            this.openQRCodeButton});
-            this.recentStackPanel1.Name = "recentStackPanel1";
-            // 
-            // openCSVButton
-            // 
-            this.openCSVButton.Caption = "CSV";
-            this.openCSVButton.Description = null;
-            this.openCSVButton.ImageOptions.ItemNormal.Image = global::windows_theodolite.Properties.Resources.csv;
-            this.openCSVButton.Name = "openCSVButton";
-            this.openCSVButton.ItemClick += new DevExpress.XtraBars.Ribbon.RecentItemEventHandler(this.backstage_ItemClick);
-            // 
-            // openQRCodeButton
-            // 
-            this.openQRCodeButton.Caption = "QR Code";
-            this.openQRCodeButton.Description = null;
-            this.openQRCodeButton.ImageOptions.ItemNormal.Image = global::windows_theodolite.Properties.Resources.qr_code;
-            this.openQRCodeButton.Name = "openQRCodeButton";
-            this.openQRCodeButton.ItemClick += new DevExpress.XtraBars.Ribbon.RecentItemEventHandler(this.backstage_ItemClick);
+            this.backstage.Showing += new System.EventHandler(this.backstage_Showing);
             // 
             // backstageViewClientControl2
             // 
             this.backstageViewClientControl2.Controls.Add(this.recentItemControl2);
             this.backstageViewClientControl2.Location = new System.Drawing.Point(132, 63);
             this.backstageViewClientControl2.Name = "backstageViewClientControl2";
-            this.backstageViewClientControl2.Size = new System.Drawing.Size(309, 210);
+            this.backstageViewClientControl2.Size = new System.Drawing.Size(279, 265);
             this.backstageViewClientControl2.TabIndex = 2;
             // 
             // recentItemControl2
@@ -246,7 +274,7 @@ namespace windows_theodolite.Forms
             this.recentItemControl2.MainPanel = this.recentStackPanel3;
             this.recentItemControl2.Name = "recentItemControl2";
             this.recentItemControl2.SelectedTab = null;
-            this.recentItemControl2.Size = new System.Drawing.Size(370, 210);
+            this.recentItemControl2.Size = new System.Drawing.Size(370, 265);
             this.recentItemControl2.TabIndex = 0;
             this.recentItemControl2.Title = "Save";
             // 
@@ -268,6 +296,7 @@ namespace windows_theodolite.Forms
             this.saveCSVButton.Description = null;
             this.saveCSVButton.ImageOptions.ItemNormal.Image = global::windows_theodolite.Properties.Resources.csv;
             this.saveCSVButton.Name = "saveCSVButton";
+            this.saveCSVButton.PinButtonVisibility = DevExpress.XtraBars.Ribbon.RecentPinButtonVisibility.Never;
             this.saveCSVButton.ItemClick += new DevExpress.XtraBars.Ribbon.RecentItemEventHandler(this.backstage_ItemClick);
             // 
             // saveExcelButton
@@ -276,6 +305,7 @@ namespace windows_theodolite.Forms
             this.saveExcelButton.Description = null;
             this.saveExcelButton.ImageOptions.ItemNormal.Image = global::windows_theodolite.Properties.Resources.excel;
             this.saveExcelButton.Name = "saveExcelButton";
+            this.saveExcelButton.PinButtonVisibility = DevExpress.XtraBars.Ribbon.RecentPinButtonVisibility.Never;
             this.saveExcelButton.ItemClick += new DevExpress.XtraBars.Ribbon.RecentItemEventHandler(this.backstage_ItemClick);
             // 
             // saveQRCodeButton
@@ -284,20 +314,91 @@ namespace windows_theodolite.Forms
             this.saveQRCodeButton.Description = null;
             this.saveQRCodeButton.ImageOptions.ItemNormal.Image = global::windows_theodolite.Properties.Resources.qr_code;
             this.saveQRCodeButton.Name = "saveQRCodeButton";
+            this.saveQRCodeButton.PinButtonVisibility = DevExpress.XtraBars.Ribbon.RecentPinButtonVisibility.Never;
             this.saveQRCodeButton.ItemClick += new DevExpress.XtraBars.Ribbon.RecentItemEventHandler(this.backstage_ItemClick);
+            // 
+            // backstageViewClientControl1
+            // 
+            this.backstageViewClientControl1.Controls.Add(this.recentItemControl1);
+            this.backstageViewClientControl1.Location = new System.Drawing.Point(132, 62);
+            this.backstageViewClientControl1.Name = "backstageViewClientControl1";
+            this.backstageViewClientControl1.Size = new System.Drawing.Size(280, 267);
+            this.backstageViewClientControl1.TabIndex = 1;
+            // 
+            // recentItemControl1
+            // 
+            this.recentItemControl1.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
+            this.recentItemControl1.DefaultContentPanel = this.recentStackPanel2;
+            this.recentItemControl1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.recentItemControl1.Location = new System.Drawing.Point(0, 0);
+            this.recentItemControl1.MainPanel = this.recentStackPanel1;
+            this.recentItemControl1.Name = "recentItemControl1";
+            this.recentItemControl1.SelectedTab = this.openRecentButton;
+            this.recentItemControl1.Size = new System.Drawing.Size(370, 267);
+            this.recentItemControl1.TabIndex = 0;
+            this.recentItemControl1.Title = "Open";
+            // 
+            // recentStackPanel2
+            // 
+            this.recentStackPanel2.Name = "recentStackPanel2";
+            // 
+            // recentStackPanel1
+            // 
+            this.recentStackPanel1.Items.AddRange(new DevExpress.XtraBars.Ribbon.RecentItemBase[] {
+            this.openRecentButton,
+            this.recentSeparatorItem1,
+            this.openCSVButton,
+            this.openQRCodeButton});
+            this.recentStackPanel1.Name = "recentStackPanel1";
+            this.recentStackPanel1.SelectedItem = this.openRecentButton;
+            // 
+            // openRecentButton
+            // 
+            this.openRecentButton.Caption = "Recent";
+            this.openRecentButton.ImageOptions.ItemNormal.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("openRecentButton.ImageOptions.ItemNormal.SvgImage")));
+            this.openRecentButton.Name = "openRecentButton";
+            this.openRecentButton.TabPanel = this.openRecentTab;
+            // 
+            // openRecentTab
+            // 
+            this.openRecentTab.Caption = "Recent";
+            this.openRecentTab.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("openRecentTab.ImageOptions.SvgImage")));
+            this.openRecentTab.Name = "openRecentTab";
+            // 
+            // recentSeparatorItem1
+            // 
+            this.recentSeparatorItem1.Name = "recentSeparatorItem1";
+            // 
+            // openCSVButton
+            // 
+            this.openCSVButton.Caption = "CSV";
+            this.openCSVButton.Description = null;
+            this.openCSVButton.ImageOptions.ItemNormal.Image = global::windows_theodolite.Properties.Resources.csv;
+            this.openCSVButton.Name = "openCSVButton";
+            this.openCSVButton.PinButtonVisibility = DevExpress.XtraBars.Ribbon.RecentPinButtonVisibility.Never;
+            this.openCSVButton.ItemClick += new DevExpress.XtraBars.Ribbon.RecentItemEventHandler(this.backstage_ItemClick);
+            // 
+            // openQRCodeButton
+            // 
+            this.openQRCodeButton.Caption = "QR Code";
+            this.openQRCodeButton.Description = null;
+            this.openQRCodeButton.ImageOptions.ItemNormal.Image = global::windows_theodolite.Properties.Resources.qr_code;
+            this.openQRCodeButton.Name = "openQRCodeButton";
+            this.openQRCodeButton.PinButtonVisibility = DevExpress.XtraBars.Ribbon.RecentPinButtonVisibility.Never;
+            this.openQRCodeButton.ItemClick += new DevExpress.XtraBars.Ribbon.RecentItemEventHandler(this.backstage_ItemClick);
             // 
             // backstageOpenItem
             // 
             this.backstageOpenItem.Caption = "Open";
             this.backstageOpenItem.ContentControl = this.backstageViewClientControl1;
             this.backstageOpenItem.Name = "backstageOpenItem";
-            this.backstageOpenItem.Selected = true;
             // 
             // backstageSaveItem
             // 
             this.backstageSaveItem.Caption = "Save";
             this.backstageSaveItem.ContentControl = this.backstageViewClientControl2;
             this.backstageSaveItem.Name = "backstageSaveItem";
+            this.backstageSaveItem.Selected = true;
             // 
             // backstageViewItemSeparator1
             // 
@@ -312,24 +413,43 @@ namespace windows_theodolite.Forms
             // sortiesCheckInButton
             // 
             this.sortiesCheckInButton.Caption = "Check-in";
+            this.sortiesCheckInButton.Enabled = false;
             this.sortiesCheckInButton.Id = 2;
             this.sortiesCheckInButton.ImageOptions.Image = global::windows_theodolite.Properties.Resources.check_in_desk;
             this.sortiesCheckInButton.Name = "sortiesCheckInButton";
             this.sortiesCheckInButton.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large;
+            toolTipTitleItem1.Text = "Check-in";
+            toolTipItem1.Text = "Setup the sorties and the modes of the employments.";
+            toolTipItem2.Text = "Press this button when the flight is about to reach the training range.";
+            superToolTip1.Items.Add(toolTipTitleItem1);
+            superToolTip1.Items.Add(toolTipItem1);
+            superToolTip1.Items.Add(toolTipSeparatorItem1);
+            superToolTip1.Items.Add(toolTipItem2);
+            this.sortiesCheckInButton.SuperTip = superToolTip1;
             this.sortiesCheckInButton.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barButtonItem1_ItemClick);
             // 
             // sortiesCheckOutButton
             // 
             this.sortiesCheckOutButton.Caption = "Check-out";
+            this.sortiesCheckOutButton.Enabled = false;
             this.sortiesCheckOutButton.Id = 3;
             this.sortiesCheckOutButton.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("sortiesCheckOutButton.ImageOptions.Image")));
             this.sortiesCheckOutButton.Name = "sortiesCheckOutButton";
             this.sortiesCheckOutButton.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large;
+            toolTipTitleItem2.Text = "Check-out";
+            toolTipItem3.Text = "Clears the table and generates a QR Code with the employment data to be sent to t" +
+    "he weapons officer.";
+            toolTipItem4.Text = "Press this button when the flight is about to leave the training range.";
+            superToolTip2.Items.Add(toolTipTitleItem2);
+            superToolTip2.Items.Add(toolTipItem3);
+            superToolTip2.Items.Add(toolTipSeparatorItem2);
+            superToolTip2.Items.Add(toolTipItem4);
+            this.sortiesCheckOutButton.SuperTip = superToolTip2;
             this.sortiesCheckOutButton.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.sortiesCheckOutButton_ItemClick);
             // 
             // barStaticItem1
             // 
-            this.barStaticItem1.Caption = "Developed by Jean Knapp";
+            this.barStaticItem1.Caption = "2021 - Developed by Jean Knapp";
             this.barStaticItem1.Id = 4;
             this.barStaticItem1.Name = "barStaticItem1";
             // 
@@ -340,6 +460,16 @@ namespace windows_theodolite.Forms
             this.rangeSettingsButton.ImageOptions.Image = global::windows_theodolite.Properties.Resources.theodolite;
             this.rangeSettingsButton.Name = "rangeSettingsButton";
             this.rangeSettingsButton.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large;
+            toolTipTitleItem3.Text = "Range";
+            toolTipItem5.Text = "Sets up the range dimensions so the distance and direction of impacts can be calc" +
+    "ulated.";
+            toolTipItem6.Text = "This should be set up by the weapons officer prior to the beginning of the employ" +
+    "ments.";
+            superToolTip3.Items.Add(toolTipTitleItem3);
+            superToolTip3.Items.Add(toolTipItem5);
+            superToolTip3.Items.Add(toolTipSeparatorItem3);
+            superToolTip3.Items.Add(toolTipItem6);
+            this.rangeSettingsButton.SuperTip = superToolTip3;
             this.rangeSettingsButton.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.rangeSettingsButton_ItemClick);
             // 
             // modeSettingsButton
@@ -349,7 +479,75 @@ namespace windows_theodolite.Forms
             this.modeSettingsButton.ImageOptions.Image = global::windows_theodolite.Properties.Resources.bombs;
             this.modeSettingsButton.Name = "modeSettingsButton";
             this.modeSettingsButton.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large;
+            toolTipTitleItem4.Text = "Modes";
+            toolTipItem7.Text = "Sets up the modes that can be selected at Check-in.";
+            toolTipItem8.Text = "This should be set up by the weapons officer prior to the beginning of the employ" +
+    "ments.";
+            superToolTip4.Items.Add(toolTipTitleItem4);
+            superToolTip4.Items.Add(toolTipItem7);
+            superToolTip4.Items.Add(toolTipSeparatorItem4);
+            superToolTip4.Items.Add(toolTipItem8);
+            this.modeSettingsButton.SuperTip = superToolTip4;
             this.modeSettingsButton.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.modeSettingsButton_ItemClick);
+            // 
+            // barEditItem1
+            // 
+            this.barEditItem1.Caption = "AutoSave";
+            this.barEditItem1.Edit = this.repositoryItemToggleSwitch1;
+            this.barEditItem1.EditValue = true;
+            this.barEditItem1.Enabled = false;
+            this.barEditItem1.Id = 13;
+            this.barEditItem1.Name = "barEditItem1";
+            toolTipTitleItem5.Text = "AutoSave";
+            toolTipItem9.Text = "AutoSave is always on. You don\'t have to worry about backups. It\'s always saved.";
+            toolTipItem10.Text = "You can access the files in the Recent Tab in the Backstage.";
+            superToolTip5.Items.Add(toolTipTitleItem5);
+            superToolTip5.Items.Add(toolTipItem9);
+            superToolTip5.Items.Add(toolTipItem10);
+            this.barEditItem1.SuperTip = superToolTip5;
+            // 
+            // repositoryItemToggleSwitch1
+            // 
+            this.repositoryItemToggleSwitch1.AutoHeight = false;
+            this.repositoryItemToggleSwitch1.GlyphAlignment = DevExpress.Utils.HorzAlignment.Far;
+            this.repositoryItemToggleSwitch1.Name = "repositoryItemToggleSwitch1";
+            this.repositoryItemToggleSwitch1.OffText = "Off";
+            this.repositoryItemToggleSwitch1.OnText = "On";
+            // 
+            // passwordEdit
+            // 
+            this.passwordEdit.Caption = "Encryption Word";
+            this.passwordEdit.Edit = this.repositoryItemTextEdit1;
+            this.passwordEdit.EditWidth = 72;
+            this.passwordEdit.Id = 14;
+            this.passwordEdit.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("passwordEdit.ImageOptions.SvgImage")));
+            this.passwordEdit.Name = "passwordEdit";
+            toolTipTitleItem6.Text = "Encryption Word";
+            toolTipItem11.Text = "The word to be used to encrypt and decrypt the generated QR Code.";
+            toolTipItem12.Text = "Both computers (the sender and the receiver) should have the same word set to be " +
+    "able to propertly transmit the data.";
+            toolTipItem13.Text = "The data cannot be retrived without the correct encryption word.";
+            toolTipItem14.AllowHtmlText = DevExpress.Utils.DefaultBoolean.True;
+            toolTipItem14.Text = "<b>Do not disclose this data to anyone not involved in the information transmissi" +
+    "on.</b>";
+            toolTipItem15.Text = "This should be set up by the weapons officer prior to the beginning of the employ" +
+    "ments and changed often.";
+            superToolTip6.Items.Add(toolTipTitleItem6);
+            superToolTip6.Items.Add(toolTipItem11);
+            superToolTip6.Items.Add(toolTipItem12);
+            superToolTip6.Items.Add(toolTipItem13);
+            superToolTip6.Items.Add(toolTipSeparatorItem5);
+            superToolTip6.Items.Add(toolTipItem14);
+            superToolTip6.Items.Add(toolTipSeparatorItem6);
+            superToolTip6.Items.Add(toolTipItem15);
+            this.passwordEdit.SuperTip = superToolTip6;
+            this.passwordEdit.EditValueChanged += new System.EventHandler(this.passwordEdit_EditValueChanged);
+            // 
+            // repositoryItemTextEdit1
+            // 
+            this.repositoryItemTextEdit1.AutoHeight = false;
+            this.repositoryItemTextEdit1.Name = "repositoryItemTextEdit1";
+            this.repositoryItemTextEdit1.PasswordChar = '*';
             // 
             // ribbonPage1
             // 
@@ -369,7 +567,8 @@ namespace windows_theodolite.Forms
             // ribbonPage2
             // 
             this.ribbonPage2.Groups.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPageGroup[] {
-            this.settingsGroup});
+            this.settingsGroup,
+            this.ribbonPageGroup1});
             this.ribbonPage2.Name = "ribbonPage2";
             this.ribbonPage2.Text = "Settings";
             // 
@@ -380,6 +579,12 @@ namespace windows_theodolite.Forms
             this.settingsGroup.ItemLinks.Add(this.modeSettingsButton);
             this.settingsGroup.Name = "settingsGroup";
             this.settingsGroup.Text = "Settings";
+            // 
+            // ribbonPageGroup1
+            // 
+            this.ribbonPageGroup1.ItemLinks.Add(this.passwordEdit);
+            this.ribbonPageGroup1.Name = "ribbonPageGroup1";
+            this.ribbonPageGroup1.Text = "QR Code";
             // 
             // repositoryItemSpinEdit1
             // 
@@ -408,7 +613,7 @@ namespace windows_theodolite.Forms
             this.ribbonStatusBar.Location = new System.Drawing.Point(0, 586);
             this.ribbonStatusBar.Name = "ribbonStatusBar";
             this.ribbonStatusBar.Ribbon = this.ribbon;
-            this.ribbonStatusBar.Size = new System.Drawing.Size(642, 22);
+            this.ribbonStatusBar.Size = new System.Drawing.Size(640, 22);
             // 
             // employmentsTree
             // 
@@ -441,7 +646,7 @@ namespace windows_theodolite.Forms
             this.repositoryDistanceEdit,
             this.repositoryDirectionEdit,
             this.repositoryHitsEdit});
-            this.employmentsTree.Size = new System.Drawing.Size(642, 307);
+            this.employmentsTree.Size = new System.Drawing.Size(640, 307);
             this.employmentsTree.TabIndex = 6;
             this.employmentsTree.TabStop = false;
             this.employmentsTree.CellValueChanged += new DevExpress.XtraTreeList.CellValueChangedEventHandler(this.employmentsTree_CellValueChanged);
@@ -662,9 +867,11 @@ namespace windows_theodolite.Forms
             // modeEdit
             // 
             this.modeEdit.EditValue = "";
+            this.modeEdit.Enabled = false;
             this.modeEdit.Location = new System.Drawing.Point(111, 34);
             this.modeEdit.MenuManager = this.ribbon;
             this.modeEdit.Name = "modeEdit";
+            this.modeEdit.Properties.AllowNullInput = DevExpress.Utils.DefaultBoolean.False;
             this.modeEdit.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.modeEdit.Properties.Appearance.Options.UseFont = true;
             this.modeEdit.Properties.AppearanceDropDown.Font = new System.Drawing.Font("Tahoma", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -674,20 +881,34 @@ namespace windows_theodolite.Forms
             this.modeEdit.Properties.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.modeEdit.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
             this.modeEdit.Size = new System.Drawing.Size(100, 36);
+            toolTipTitleItem7.Text = "Mode";
+            toolTipItem16.Text = "Select the mode of the next employment.";
+            superToolTip7.Items.Add(toolTipTitleItem7);
+            superToolTip7.Items.Add(toolTipItem16);
+            this.modeEdit.SuperTip = superToolTip7;
             this.modeEdit.TabIndex = 1;
             this.modeEdit.TabStop = false;
+            this.modeEdit.EditValueChanged += new System.EventHandler(this.inputEdit_EditValueChanged);
             // 
             // secondaryFlagEdit
             // 
             this.secondaryFlagEdit.EditValue = "";
+            this.secondaryFlagEdit.Enabled = false;
             this.secondaryFlagEdit.Location = new System.Drawing.Point(429, 34);
             this.secondaryFlagEdit.MenuManager = this.ribbon;
             this.secondaryFlagEdit.Name = "secondaryFlagEdit";
+            this.secondaryFlagEdit.Properties.AllowNullInput = DevExpress.Utils.DefaultBoolean.False;
             this.secondaryFlagEdit.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.secondaryFlagEdit.Properties.Appearance.Options.UseFont = true;
             this.secondaryFlagEdit.Properties.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.secondaryFlagEdit.Size = new System.Drawing.Size(100, 36);
+            toolTipTitleItem8.Text = "Secondary tower";
+            toolTipItem17.Text = "Insert the value observed in the theodolite of the secondary tower.";
+            superToolTip8.Items.Add(toolTipTitleItem8);
+            superToolTip8.Items.Add(toolTipItem17);
+            this.secondaryFlagEdit.SuperTip = superToolTip8;
             this.secondaryFlagEdit.TabIndex = 2;
+            this.secondaryFlagEdit.EditValueChanged += new System.EventHandler(this.inputEdit_EditValueChanged);
             // 
             // headingLabel
             // 
@@ -732,9 +953,11 @@ namespace windows_theodolite.Forms
             // pilotEdit
             // 
             this.pilotEdit.EditValue = "";
+            this.pilotEdit.Enabled = false;
             this.pilotEdit.Location = new System.Drawing.Point(217, 34);
             this.pilotEdit.MenuManager = this.ribbon;
             this.pilotEdit.Name = "pilotEdit";
+            this.pilotEdit.Properties.AllowNullInput = DevExpress.Utils.DefaultBoolean.False;
             this.pilotEdit.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.pilotEdit.Properties.Appearance.Options.UseFont = true;
             this.pilotEdit.Properties.AppearanceDropDown.Font = new System.Drawing.Font("Tahoma", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -744,7 +967,13 @@ namespace windows_theodolite.Forms
             this.pilotEdit.Properties.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.pilotEdit.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
             this.pilotEdit.Size = new System.Drawing.Size(100, 36);
+            toolTipTitleItem9.Text = "Pilot";
+            toolTipItem18.Text = "Select the pilot about to employ any weapons.";
+            superToolTip9.Items.Add(toolTipTitleItem9);
+            superToolTip9.Items.Add(toolTipItem18);
+            this.pilotEdit.SuperTip = superToolTip9;
             this.pilotEdit.TabIndex = 0;
+            this.pilotEdit.EditValueChanged += new System.EventHandler(this.inputEdit_EditValueChanged);
             // 
             // pilotLabel
             // 
@@ -759,14 +988,22 @@ namespace windows_theodolite.Forms
             // hitsEdit
             // 
             this.hitsEdit.EditValue = "";
+            this.hitsEdit.Enabled = false;
             this.hitsEdit.Location = new System.Drawing.Point(535, 34);
             this.hitsEdit.MenuManager = this.ribbon;
             this.hitsEdit.Name = "hitsEdit";
+            this.hitsEdit.Properties.AllowNullInput = DevExpress.Utils.DefaultBoolean.False;
             this.hitsEdit.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.hitsEdit.Properties.Appearance.Options.UseFont = true;
             this.hitsEdit.Properties.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.hitsEdit.Size = new System.Drawing.Size(100, 36);
+            toolTipTitleItem10.Text = "Hits";
+            toolTipItem19.Text = "Insert the amount of observed munition hits.";
+            superToolTip10.Items.Add(toolTipTitleItem10);
+            superToolTip10.Items.Add(toolTipItem19);
+            this.hitsEdit.SuperTip = superToolTip10;
             this.hitsEdit.TabIndex = 3;
+            this.hitsEdit.EditValueChanged += new System.EventHandler(this.inputEdit_EditValueChanged);
             // 
             // hitsLabel
             // 
@@ -784,9 +1021,16 @@ namespace windows_theodolite.Forms
             this.saveButton.Appearance.Font = new System.Drawing.Font("Tahoma", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.saveButton.Appearance.Options.UseBackColor = true;
             this.saveButton.Appearance.Options.UseFont = true;
+            this.saveButton.Enabled = false;
             this.saveButton.Location = new System.Drawing.Point(535, 76);
             this.saveButton.Name = "saveButton";
             this.saveButton.Size = new System.Drawing.Size(100, 30);
+            toolTipTitleItem11.Text = "Save";
+            toolTipItem20.Text = "Adds the employment to the table. You can edit the data directly in the table aft" +
+    "er you press Save.";
+            superToolTip11.Items.Add(toolTipTitleItem11);
+            superToolTip11.Items.Add(toolTipItem20);
+            this.saveButton.SuperTip = superToolTip11;
             this.saveButton.TabIndex = 4;
             this.saveButton.Text = "Save";
             this.saveButton.Click += new System.EventHandler(this.saveButton_Click);
@@ -795,9 +1039,15 @@ namespace windows_theodolite.Forms
             // 
             this.clearButton.Appearance.Font = new System.Drawing.Font("Tahoma", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.clearButton.Appearance.Options.UseFont = true;
+            this.clearButton.Enabled = false;
             this.clearButton.Location = new System.Drawing.Point(429, 76);
             this.clearButton.Name = "clearButton";
             this.clearButton.Size = new System.Drawing.Size(100, 30);
+            toolTipTitleItem12.Text = "Clear";
+            toolTipItem21.Text = "Clears the inserted data in case the employment was aborted.";
+            superToolTip12.Items.Add(toolTipTitleItem12);
+            superToolTip12.Items.Add(toolTipItem21);
+            this.clearButton.SuperTip = superToolTip12;
             this.clearButton.TabIndex = 25;
             this.clearButton.TabStop = false;
             this.clearButton.Text = "Clear";
@@ -805,27 +1055,43 @@ namespace windows_theodolite.Forms
             // primaryFlagEdit
             // 
             this.primaryFlagEdit.EditValue = "";
+            this.primaryFlagEdit.Enabled = false;
             this.primaryFlagEdit.Location = new System.Drawing.Point(323, 34);
             this.primaryFlagEdit.MenuManager = this.ribbon;
             this.primaryFlagEdit.Name = "primaryFlagEdit";
+            this.primaryFlagEdit.Properties.AllowNullInput = DevExpress.Utils.DefaultBoolean.False;
             this.primaryFlagEdit.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.primaryFlagEdit.Properties.Appearance.Options.UseFont = true;
             this.primaryFlagEdit.Properties.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.primaryFlagEdit.Size = new System.Drawing.Size(100, 36);
+            toolTipTitleItem13.Text = "Primary flag";
+            toolTipItem22.Text = "Insert the value observed in the theodolite of the primary tower.";
+            superToolTip13.Items.Add(toolTipTitleItem13);
+            superToolTip13.Items.Add(toolTipItem22);
+            this.primaryFlagEdit.SuperTip = superToolTip13;
             this.primaryFlagEdit.TabIndex = 1;
+            this.primaryFlagEdit.EditValueChanged += new System.EventHandler(this.inputEdit_EditValueChanged);
             // 
             // headingEdit
             // 
             this.headingEdit.EditValue = "";
+            this.headingEdit.Enabled = false;
             this.headingEdit.Location = new System.Drawing.Point(5, 34);
             this.headingEdit.MenuManager = this.ribbon;
             this.headingEdit.Name = "headingEdit";
+            this.headingEdit.Properties.AllowNullInput = DevExpress.Utils.DefaultBoolean.False;
             this.headingEdit.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.headingEdit.Properties.Appearance.Options.UseFont = true;
             this.headingEdit.Properties.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.headingEdit.Size = new System.Drawing.Size(100, 36);
+            toolTipTitleItem14.Text = "Heading";
+            toolTipItem23.Text = "Select the final attack heading of the next employment.";
+            superToolTip14.Items.Add(toolTipTitleItem14);
+            superToolTip14.Items.Add(toolTipItem23);
+            this.headingEdit.SuperTip = superToolTip14;
             this.headingEdit.TabIndex = 0;
             this.headingEdit.TabStop = false;
+            this.headingEdit.EditValueChanged += new System.EventHandler(this.inputEdit_EditValueChanged);
             // 
             // panelControl1
             // 
@@ -848,12 +1114,13 @@ namespace windows_theodolite.Forms
             this.panelControl1.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.panelControl1.Location = new System.Drawing.Point(0, 465);
             this.panelControl1.Name = "panelControl1";
-            this.panelControl1.Size = new System.Drawing.Size(642, 121);
+            this.panelControl1.Size = new System.Drawing.Size(640, 121);
             this.panelControl1.TabIndex = 28;
             // 
             // commentsEdit
             // 
             this.commentsEdit.EditValue = "";
+            this.commentsEdit.Enabled = false;
             this.commentsEdit.Location = new System.Drawing.Point(111, 76);
             this.commentsEdit.MenuManager = this.ribbon;
             this.commentsEdit.Name = "commentsEdit";
@@ -861,6 +1128,11 @@ namespace windows_theodolite.Forms
             this.commentsEdit.Properties.Appearance.Options.UseFont = true;
             this.commentsEdit.Properties.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.commentsEdit.Size = new System.Drawing.Size(312, 36);
+            toolTipTitleItem15.Text = "Comments";
+            toolTipItem24.Text = "Insert relevant comments, if any, like fouls or penalties of this employment.";
+            superToolTip15.Items.Add(toolTipTitleItem15);
+            superToolTip15.Items.Add(toolTipItem24);
+            this.commentsEdit.SuperTip = superToolTip15;
             this.commentsEdit.TabIndex = 27;
             // 
             // labelControl1
@@ -879,14 +1151,14 @@ namespace windows_theodolite.Forms
             this.Appearance.Options.UseBackColor = true;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(642, 608);
+            this.ClientSize = new System.Drawing.Size(640, 608);
             this.Controls.Add(this.backstage);
             this.Controls.Add(this.employmentsTree);
             this.Controls.Add(this.panelControl1);
             this.Controls.Add(this.ribbonStatusBar);
             this.Controls.Add(this.ribbon);
             this.IconOptions.Icon = ((System.Drawing.Icon)(resources.GetObject("MainForm.IconOptions.Icon")));
-            this.MinimumSize = new System.Drawing.Size(644, 1);
+            this.MinimumSize = new System.Drawing.Size(642, 1);
             this.Name = "MainForm";
             this.Ribbon = this.ribbon;
             this.StatusBar = this.ribbonStatusBar;
@@ -894,10 +1166,12 @@ namespace windows_theodolite.Forms
             ((System.ComponentModel.ISupportInitialize)(this.ribbon)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.backstage)).EndInit();
             this.backstage.ResumeLayout(false);
-            this.backstageViewClientControl1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.recentItemControl1)).EndInit();
             this.backstageViewClientControl2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.recentItemControl2)).EndInit();
+            this.backstageViewClientControl1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.recentItemControl1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemToggleSwitch1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemTextEdit1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemSpinEdit1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemSpinEdit2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemSpinEdit3)).EndInit();
@@ -1000,5 +1274,13 @@ namespace windows_theodolite.Forms
         private DevExpress.XtraBars.Ribbon.RecentPinItem saveCSVButton;
         private DevExpress.XtraBars.Ribbon.RecentPinItem saveExcelButton;
         private DevExpress.XtraBars.Ribbon.RecentPinItem saveQRCodeButton;
+        private DevExpress.XtraBars.Ribbon.RecentTabItem openRecentButton;
+        private DevExpress.XtraBars.Ribbon.RecentStackPanel openRecentTab;
+        private DevExpress.XtraBars.Ribbon.RecentSeparatorItem recentSeparatorItem1;
+        private DevExpress.XtraBars.BarEditItem barEditItem1;
+        private DevExpress.XtraEditors.Repository.RepositoryItemToggleSwitch repositoryItemToggleSwitch1;
+        private DevExpress.XtraBars.BarEditItem passwordEdit;
+        private DevExpress.XtraEditors.Repository.RepositoryItemTextEdit repositoryItemTextEdit1;
+        private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup1;
     }
 }

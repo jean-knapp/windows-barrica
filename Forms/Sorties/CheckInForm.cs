@@ -68,21 +68,47 @@ namespace windows_theodolite.Forms.Sorties
 
         private void addSortieButton_Click(object sender, EventArgs e)
         {
-            sortiesTree.BeginUnboundLoad();
-            sortiesTree.AppendNode(new object[] { pilotEdit.EditValue.ToString(), tailNumberEdit.EditValue.ToString() }, null);
-            sortiesTree.EndUnboundLoad();
-            pilotEdit.EditValue = "";
-            tailNumberEdit.EditValue = "";
-            pilotEdit.Focus();
+            if (pilotEdit.EditValue?.ToString() != null && pilotEdit.EditValue?.ToString() != "" && tailNumberEdit.EditValue?.ToString() != null && tailNumberEdit.EditValue?.ToString() != "")
+            {
+                sortiesTree.BeginUnboundLoad();
+                sortiesTree.AppendNode(new object[] { pilotEdit.EditValue.ToString(), tailNumberEdit.EditValue.ToString() }, null);
+                sortiesTree.EndUnboundLoad();
+                pilotEdit.EditValue = "";
+                tailNumberEdit.EditValue = "";
+                pilotEdit.Focus();
+
+                checkInButton.Enabled = (sortiesTree.Nodes.Count > 0 && modesTree.Nodes.Count > 0);
+            }
         }
 
         private void addModeButton_Click(object sender, EventArgs e)
         {
-            modesTree.BeginUnboundLoad();
-            modesTree.AppendNode(new object[] { modeCombo.EditValue.ToString() }, null);
-            modesTree.EndUnboundLoad();
-            modeCombo.EditValue = "";
-            modeCombo.Focus();
+            if (modeCombo.EditValue?.ToString() != null && modeCombo.EditValue?.ToString() != "")
+            {
+                modesTree.BeginUnboundLoad();
+                modesTree.AppendNode(new object[] { modeCombo.EditValue?.ToString() }, null);
+                modesTree.EndUnboundLoad();
+                modeCombo.EditValue = "";
+                modeCombo.Focus();
+
+                checkInButton.Enabled = (sortiesTree.Nodes.Count > 0 && modesTree.Nodes.Count > 0);
+            }
+        }
+
+        private void sortiesTree_CellValueChanged(object sender, DevExpress.XtraTreeList.CellValueChangedEventArgs e)
+        {
+            if (e.Node["pilot"].ToString() == "" || e.Node["tailNumber"].ToString() == "")
+                sortiesTree.Nodes.Remove(e.Node);
+
+            checkInButton.Enabled = (sortiesTree.Nodes.Count > 0 && modesTree.Nodes.Count > 0);
+        }
+
+        private void modesTree_CellValueChanged(object sender, DevExpress.XtraTreeList.CellValueChangedEventArgs e)
+        {
+            if (e.Node["mode"].ToString() == "")
+                sortiesTree.Nodes.Remove(e.Node);
+
+            checkInButton.Enabled = (sortiesTree.Nodes.Count > 0 && modesTree.Nodes.Count > 0);
         }
     }
 }

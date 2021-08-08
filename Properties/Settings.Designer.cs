@@ -70,5 +70,29 @@ namespace windows_theodolite.Properties {
                 this["SecondaryTowerTargetDistance"] = value;
             }
         }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string AutosaveFile {
+            get {
+                return ((string)(this["AutosaveFile"]));
+            }
+            set {
+                this["AutosaveFile"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string EncryptionWord {
+            get {
+                return ((string)(this["EncryptionWord"]));
+            }
+            set {
+                this["EncryptionWord"] = value;
+            }
+        }
     }
 }

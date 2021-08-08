@@ -129,6 +129,7 @@ namespace windows_theodolite.Forms.Settings
             this.modeEdit.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.modeEdit.Properties.Appearance.Options.UseFont = true;
             this.modeEdit.Properties.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
+            this.modeEdit.Properties.MaxLength = 6;
             this.modeEdit.Size = new System.Drawing.Size(100, 36);
             this.modeEdit.TabIndex = 18;
             // 

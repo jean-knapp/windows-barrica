@@ -33,7 +33,7 @@ namespace windows_theodolite.Forms.Export
 
             string text = CompressData(lines);
 
-            string cipher = StringCipher.Encrypt(text, "helloworld");
+            string cipher = StringCipher.Encrypt(text, Properties.Settings.Default.EncryptionWord);
 
             Image qrCode = BarcodeWriter.CreateBarcode(cipher, BarcodeWriterEncoding.QRCode).Image;
 

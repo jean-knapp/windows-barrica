@@ -1,4 +1,5 @@
 ﻿using DevExpress.XtraBars;
+using DevExpress.XtraBars.Ribbon;
 using DevExpress.XtraEditors;
 using DevExpress.XtraTreeList.Nodes;
 using IronBarCode;
@@ -7,6 +8,7 @@ using System.Collections.Generic;
 using System.Diagnostics;
 using System.Drawing;
 using System.IO;
+using System.Linq;
 using System.Windows.Forms;
 using windows_theodolite.Forms.Export;
 using windows_theodolite.Forms.Settings;
@@ -30,9 +32,19 @@ namespace windows_theodolite.Forms
         {
             InitializeComponent();
 
+            passwordEdit.EditValue = Properties.Settings.Default.EncryptionWord;
+
             populateCombos();
 
             headingEdit.EditValue = defaultHeading;
+
+            if (Properties.Settings.Default.AutosaveFile != "" && File.Exists(Properties.Settings.Default.AutosaveFile))
+            {
+                Load(Properties.Settings.Default.AutosaveFile);
+                return;
+            }
+
+
         }
 
         private void saveButton_Click(object sender, EventArgs e)
@@ -67,13 +79,15 @@ namespace windows_theodolite.Forms
 
             (float distance, float direction) = getDistanceAndPosition(primaryFlag, secondaryFlag);
 
+            string comments = commentsEdit.EditValue.ToString();
+
             primaryFlagEdit.EditValue = "";
             secondaryFlagEdit.EditValue = "";
             hitsEdit.EditValue = "";
             pilotEdit.EditValue = "";
             commentsEdit.EditValue = "";
 
-            TreeListNode node = employmentsTree.AppendNode(new object[] { date, pilot, tailNumber, heading, mode, (validFlags ? primaryFlag.ToString() : ""), (validFlags ? secondaryFlag.ToString() : ""), (validFlags? distance.ToString() : ""), (validFlags? direction.ToString() : ""), (validHits ? hits.ToString() : ""), commentsEdit.EditValue.ToString() }, null);
+            TreeListNode node = employmentsTree.AppendNode(new object[] { date, pilot, tailNumber, heading, mode, (validFlags ? primaryFlag.ToString() : ""), (validFlags ? secondaryFlag.ToString() : ""), (validFlags? distance.ToString() : ""), (validFlags? direction.ToString() : ""), (validHits ? hits.ToString() : ""), comments }, null);
             employmentsTree.FocusedNode = node;
 
             pilotEdit.Focus();
@@ -91,8 +105,22 @@ namespace windows_theodolite.Forms
 
             if (form.ShowDialog() == DialogResult.OK)
             {
-                sorties = form.Sorties;
-                modes = form.Modes;
+                sorties = form.Sorties.Distinct().Where(s => s.Item1 != "" && s.Item2 != "").ToList();
+                modes = form.Modes.Distinct().Where(m => m != "").ToList();
+
+                if (sorties.Count == 0)
+                {
+                    XtraMessageBox.Show("Could not check-in. There are no sorties available.");
+                    sorties.Clear();
+                    modes.Clear();
+                } else if(modes.Count == 0)
+                {
+                    XtraMessageBox.Show("Could not check-in. There are no modes available.");
+                    sorties.Clear();
+                    modes.Clear();
+                }
+
+                sortiesCheckOutButton.Enabled = true;
 
                 populateCombos();
             }
@@ -111,7 +139,12 @@ namespace windows_theodolite.Forms
 
             employmentsTree.Nodes.Clear();
 
+            sortiesCheckOutButton.Enabled = false;
+
             populateCombos();
+
+            Properties.Settings.Default.AutosaveFile = "";
+            Properties.Settings.Default.Save();
         }
 
         private void sortiesCheckOutButton_ItemClick(object sender, ItemClickEventArgs e)
@@ -120,14 +153,32 @@ namespace windows_theodolite.Forms
             if (lines.Count > 1)
             {
                 ExportQRCodeForm form = new ExportQRCodeForm(lines, sorties, modes);
-                form.Show();
+                form.ShowDialog();
             }
 
             CheckOut();
         }
 
+        private bool CanCheckIn()
+        {
+            return ModeSettingsForm.GetModes().Count > 0 && priTowerTargetDistance > 0 && secTowerTargetDistance > 0 && towerTowerDistance > 0;
+        }
+
         private void populateCombos()
         {
+            sortiesCheckInButton.Enabled = CanCheckIn();
+
+            bool valid = (sorties.Count > 0 && modes.Count > 0);
+
+            headingEdit.Enabled = valid;
+            modeEdit.Enabled = valid;
+            pilotEdit.Enabled = valid;
+            primaryFlagEdit.Enabled = valid;
+            secondaryFlagEdit.Enabled = valid;
+            hitsEdit.Enabled = valid;
+            clearButton.Enabled = valid;
+            commentsEdit.Enabled = valid;
+            
             pilotEdit.Properties.Items.Clear();
             foreach ((string, string) sortie in sorties)
             {
@@ -199,6 +250,8 @@ namespace windows_theodolite.Forms
                 Properties.Settings.Default.TowerTowerDistance = towerTowerDistance;
                 Properties.Settings.Default.DefaultHeading = defaultHeading;
                 Properties.Settings.Default.Save();
+
+                populateCombos();
             }
         }
 
@@ -206,12 +259,17 @@ namespace windows_theodolite.Forms
         {
             ModeSettingsForm form = new ModeSettingsForm();
             form.ShowDialog();
+
+            populateCombos();
         }
 
         private void Save(string fileName)
         {
             Directory.CreateDirectory(Path.GetDirectoryName(fileName));
             File.WriteAllLines(fileName, GetEmployments());
+
+            Properties.Settings.Default.AutosaveFile = fileName;
+            Properties.Settings.Default.Save();
         }
 
         private void Save()
@@ -243,30 +301,53 @@ namespace windows_theodolite.Forms
             modes.Clear();
             employmentsTree.Nodes.Clear();
 
-            string[] parts = fileName.Split('[');
-            if (parts.Length == 3)
-            for (int i = 1; i <= 2; i++)
+            try
             {
-                string part = parts[i];
-                part = part.Substring(0, part.IndexOf(']'));
 
-                string[] cells = part.Split('-');
+                string[] parts = fileName.Split('[');
+                if (parts.Length == 3)
+                    for (int i = 1; i <= 2; i++)
+                    {
+                        string part = parts[i];
+                        part = part.Substring(0, part.IndexOf(']'));
 
-                if (i == 1)
-                {
-                    // Sorties
-                    foreach(string cell in cells)
-                        sorties.Add((cell.Substring(0, 3), cell.Substring(3)));
-                } else
-                {
-                    // Modes
-                    foreach (string cell in cells)
-                        modes.Add(cell);
-                }
+                        string[] cells = part.Split('-');
+
+                        if (i == 1)
+                        {
+                            // Sorties
+                            foreach (string cell in cells)
+                                sorties.Add((cell.Substring(0, 3), cell.Substring(3)));
+                        }
+                        else
+                        {
+                            // Modes
+                            foreach (string cell in cells)
+                                modes.Add(cell);
+                        }
+                    }
+            } catch (ArgumentOutOfRangeException e)
+            {
+                XtraMessageBox.Show("Wrong file format.");
+
+                sorties.Clear();
+                modes.Clear();
+                employmentsTree.Nodes.Clear();
+                return;
             }
 
             SetEmployments(lines);
+
+            if (employmentsTree.Nodes.Count == 0)
+            {
+                XtraMessageBox.Show("Could not load any data.");
+                return;
+            }
+
             populateCombos();
+            sortiesCheckOutButton.Enabled = true;
+
+            Save(fileName);
         }
 
         private List<string> GetEmployments()
@@ -276,17 +357,17 @@ namespace windows_theodolite.Forms
             foreach (TreeListNode employment in employmentsTree.Nodes)
             {
                 string[] cells = new string[] {
-                    employment["pilot"].ToString(),
-                    employment["tailNumber"].ToString(),
-                    employment["mode"].ToString(),
-                    employment["heading"].ToString(),
-                    employment["datetime"].ToString(),
-                    employment["primaryFlag"].ToString(),
-                    employment["secondaryFlag"].ToString(),
-                    employment["distance"].ToString(),
-                    employment["direction"].ToString(),
-                    employment["hits"].ToString(),
-                    employment["comments"].ToString()
+                    employment["pilot"]?.ToString(),
+                    employment["tailNumber"]?.ToString(),
+                    employment["mode"]?.ToString(),
+                    employment["heading"]?.ToString(),
+                    employment["datetime"]?.ToString(),
+                    employment["primaryFlag"]?.ToString(),
+                    employment["secondaryFlag"]?.ToString(),
+                    employment["distance"]?.ToString(),
+                    employment["direction"]?.ToString(),
+                    employment["hits"]?.ToString(),
+                    employment["comments"]?.ToString()
                 };
 
                 lines.Add(string.Join(",", cells));
@@ -383,49 +464,133 @@ namespace windows_theodolite.Forms
                     {
                         CheckOut();
 
-                        string cipher = BarcodeReader.ReadASingleBarcode(qrCode).Text;
-                        string compressedData = StringCipher.Decrypt(cipher, "helloworld");
-                        System.Diagnostics.Debugger.Break();
+          
+                        BarcodeResult barcode = BarcodeReader.ReadASingleBarcode(qrCode);
+                        if (barcode == null)
+                        {
+                            XtraMessageBox.Show("The selected image is not a valid QR Code.");
+                            return;
+                        }
+                        string cipher = barcode.Text;
+                        string compressedData = StringCipher.Decrypt(cipher, Properties.Settings.Default.EncryptionWord);
+
+                        if (compressedData == "")
+                        {
+                            XtraMessageBox.Show("The QR Code is invalid. The Encryption Word could be wrong or the data could not be valid.");
+                            return;
+                        }
+                        //System.Diagnostics.Debugger.Break();
                         string[] lines = ExportQRCodeForm.UncompressData(compressedData).ToArray();
 
                         SetEmployments(lines);
                         populateCombos();
                         backstage.Close();
+
+                        sortiesCheckOutButton.Enabled = true;
+  
                     }
                 }
             }
             else if(e.Item == saveQRCodeButton)
             {
-                var lines = GetEmployments();
-                if (lines.Count > 1)
+                if (employmentsTree.Nodes.Count > 0)
                 {
-                    ExportQRCodeForm form = new ExportQRCodeForm(lines, sorties, modes);
-                    form.Show();
-                    backstage.Close();
+                    var lines = GetEmployments();
+                    if (lines.Count > 1)
+                    {
+                        ExportQRCodeForm form = new ExportQRCodeForm(lines, sorties, modes);
+                        form.ShowDialog();
+                        backstage.Close();
+                    }
+                }
+                else
+                {
+                    XtraMessageBox.Show("There are no employments to save.");
                 }
             }
             else if(e.Item == saveExcelButton)
             {
-                XtraSaveFileDialog dialog = new XtraSaveFileDialog();
-                dialog.Filter = "Excel Spreadsheets (*.xlsx)|*.xlsx";
-                if (dialog.ShowDialog() == DialogResult.OK)
+                if (employmentsTree.Nodes.Count > 0)
                 {
-                    employmentsTree.ExportToXlsx(dialog.FileName);
-                    Process.Start(Path.GetDirectoryName(dialog.FileName));
-                    backstage.Close();
+                    XtraSaveFileDialog dialog = new XtraSaveFileDialog();
+                    dialog.FileName = Path.GetFileName(GetFilename().Replace(".csv", ".xlsx"));
+                    dialog.Filter = "Excel Spreadsheets (*.xlsx)|*.xlsx";
+                    if (dialog.ShowDialog() == DialogResult.OK)
+                    {
+                        employmentsTree.ExportToXlsx(dialog.FileName);
+                        Process.Start(Path.GetDirectoryName(dialog.FileName));
+                        backstage.Close();
+                    }
+                }
+                else
+                {
+                    XtraMessageBox.Show("There are no employments to save.");
                 }
             }
             else if(e.Item == saveCSVButton)
             {
-                XtraSaveFileDialog dialog = new XtraSaveFileDialog();
-                dialog.Filter = "CSV files (*.csv)|*.csv";
-                dialog.FileName = GetFilename();
-                if (dialog.ShowDialog() == DialogResult.OK)
+                if (employmentsTree.Nodes.Count > 0)
                 {
-                    Save(dialog.FileName);
-                    backstage.Close();
+                    XtraSaveFileDialog dialog = new XtraSaveFileDialog();
+                    dialog.Filter = "CSV files (*.csv)|*.csv";
+                    dialog.FileName = Path.GetFileName(GetFilename());
+                    if (dialog.ShowDialog() == DialogResult.OK)
+                    {
+                        Save(dialog.FileName);
+                        backstage.Close();
+                    }
+                } else
+                {
+                    XtraMessageBox.Show("There are no employments to save.");
                 }
             }
+        }
+
+        private void LoadRecentFiles()
+        {
+            openRecentTab.Items.Clear();
+            if (Directory.Exists(Directories.UserDirectory + "Employments/"))
+            {
+                int i = 0;
+                foreach (string file in Directory.GetFiles(Directories.UserDirectory + "Employments/").OrderByDescending(f => f))
+                {
+                    RecentPinItem item = new RecentPinItem();
+                    item.ImageOptions.ItemNormal.Image = Properties.Resources.csv;
+                    item.Caption = Path.GetFileNameWithoutExtension(file);
+                    item.Tag = file;
+                    item.ItemClick += RecentItem_ItemClick;
+                    item.PinButtonVisibility = RecentPinButtonVisibility.Never;
+
+                    openRecentTab.Items.Add(item);
+
+                    i++;
+
+                    if (i > 30) // Limit 30 items.
+                        break;
+                }
+
+            }
+        }
+
+        private void RecentItem_ItemClick(object sender, RecentItemEventArgs e)
+        {
+            Load(e.Item.Tag.ToString());
+            backstage.Close();
+        }
+        private void backstage_Showing(object sender, EventArgs e)
+        {
+            LoadRecentFiles();
+        }
+
+        private void passwordEdit_EditValueChanged(object sender, EventArgs e)
+        {
+            Properties.Settings.Default.EncryptionWord = passwordEdit.EditValue.ToString();
+            Properties.Settings.Default.Save();
+        }
+
+        private void inputEdit_EditValueChanged(object sender, EventArgs e)
+        {
+            saveButton.Enabled = (headingEdit.EditValue.ToString() != "" && modeEdit.EditValue.ToString() != "" && pilotEdit.EditValue.ToString() != "" && ((primaryFlagEdit.EditValue.ToString() != "" && secondaryFlagEdit.EditValue.ToString() != "") || (hitsEdit.EditValue.ToString() != "")));
         }
     }
 }

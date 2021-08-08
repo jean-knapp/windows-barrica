@@ -34,9 +34,12 @@ namespace windows_theodolite.Forms.Sorties
             this.cancelButton = new DevExpress.XtraEditors.SimpleButton();
             this.modesTree = new DevExpress.XtraTreeList.TreeList();
             this.treeListColumn3 = new DevExpress.XtraTreeList.Columns.TreeListColumn();
+            this.modeTreeModeRepository = new DevExpress.XtraEditors.Repository.RepositoryItemTextEdit();
             this.sortiesTree = new DevExpress.XtraTreeList.TreeList();
             this.treeListColumn1 = new DevExpress.XtraTreeList.Columns.TreeListColumn();
+            this.sortiesTreePilotRepository = new DevExpress.XtraEditors.Repository.RepositoryItemTextEdit();
             this.treeListColumn2 = new DevExpress.XtraTreeList.Columns.TreeListColumn();
+            this.sortiesTreeTailNumberRepository = new DevExpress.XtraEditors.Repository.RepositoryItemTextEdit();
             this.modesLabel = new DevExpress.XtraEditors.LabelControl();
             this.modeCombo = new DevExpress.XtraEditors.ComboBoxEdit();
             this.pilotEdit = new DevExpress.XtraEditors.TextEdit();
@@ -45,17 +48,14 @@ namespace windows_theodolite.Forms.Sorties
             this.labelControl2 = new DevExpress.XtraEditors.LabelControl();
             this.addSortieButton = new DevExpress.XtraEditors.SimpleButton();
             this.addModeButton = new DevExpress.XtraEditors.SimpleButton();
-            this.modeTreeModeRepository = new DevExpress.XtraEditors.Repository.RepositoryItemTextEdit();
-            this.sortiesTreePilotRepository = new DevExpress.XtraEditors.Repository.RepositoryItemTextEdit();
-            this.sortiesTreeTailNumberRepository = new DevExpress.XtraEditors.Repository.RepositoryItemTextEdit();
             ((System.ComponentModel.ISupportInitialize)(this.modesTree)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.modeTreeModeRepository)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.sortiesTree)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.sortiesTreePilotRepository)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.sortiesTreeTailNumberRepository)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.modeCombo.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pilotEdit.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tailNumberEdit.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.modeTreeModeRepository)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.sortiesTreePilotRepository)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.sortiesTreeTailNumberRepository)).BeginInit();
             this.SuspendLayout();
             // 
             // checkInButton
@@ -66,6 +66,7 @@ namespace windows_theodolite.Forms.Sorties
             this.checkInButton.Appearance.Options.UseBackColor = true;
             this.checkInButton.Appearance.Options.UseFont = true;
             this.checkInButton.DialogResult = System.Windows.Forms.DialogResult.OK;
+            this.checkInButton.Enabled = false;
             this.checkInButton.Location = new System.Drawing.Point(200, 307);
             this.checkInButton.Name = "checkInButton";
             this.checkInButton.Size = new System.Drawing.Size(100, 30);
@@ -94,6 +95,7 @@ namespace windows_theodolite.Forms.Sorties
             this.modeTreeModeRepository});
             this.modesTree.Size = new System.Drawing.Size(100, 179);
             this.modesTree.TabIndex = 2;
+            this.modesTree.CellValueChanged += new DevExpress.XtraTreeList.CellValueChangedEventHandler(this.modesTree_CellValueChanged);
             // 
             // treeListColumn3
             // 
@@ -103,6 +105,12 @@ namespace windows_theodolite.Forms.Sorties
             this.treeListColumn3.Name = "treeListColumn3";
             this.treeListColumn3.Visible = true;
             this.treeListColumn3.VisibleIndex = 0;
+            // 
+            // modeTreeModeRepository
+            // 
+            this.modeTreeModeRepository.AutoHeight = false;
+            this.modeTreeModeRepository.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
+            this.modeTreeModeRepository.Name = "modeTreeModeRepository";
             // 
             // sortiesTree
             // 
@@ -116,6 +124,7 @@ namespace windows_theodolite.Forms.Sorties
             this.sortiesTreeTailNumberRepository});
             this.sortiesTree.Size = new System.Drawing.Size(182, 179);
             this.sortiesTree.TabIndex = 3;
+            this.sortiesTree.CellValueChanged += new DevExpress.XtraTreeList.CellValueChangedEventHandler(this.sortiesTree_CellValueChanged);
             // 
             // treeListColumn1
             // 
@@ -127,6 +136,13 @@ namespace windows_theodolite.Forms.Sorties
             this.treeListColumn1.VisibleIndex = 0;
             this.treeListColumn1.Width = 63;
             // 
+            // sortiesTreePilotRepository
+            // 
+            this.sortiesTreePilotRepository.AutoHeight = false;
+            this.sortiesTreePilotRepository.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
+            this.sortiesTreePilotRepository.MaxLength = 3;
+            this.sortiesTreePilotRepository.Name = "sortiesTreePilotRepository";
+            // 
             // treeListColumn2
             // 
             this.treeListColumn2.Caption = "Tail number";
@@ -136,6 +152,13 @@ namespace windows_theodolite.Forms.Sorties
             this.treeListColumn2.Visible = true;
             this.treeListColumn2.VisibleIndex = 1;
             this.treeListColumn2.Width = 94;
+            // 
+            // sortiesTreeTailNumberRepository
+            // 
+            this.sortiesTreeTailNumberRepository.AutoHeight = false;
+            this.sortiesTreeTailNumberRepository.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
+            this.sortiesTreeTailNumberRepository.MaxLength = 4;
+            this.sortiesTreeTailNumberRepository.Name = "sortiesTreeTailNumberRepository";
             // 
             // modesLabel
             // 
@@ -230,26 +253,6 @@ namespace windows_theodolite.Forms.Sorties
             this.addModeButton.Text = "Add";
             this.addModeButton.Click += new System.EventHandler(this.addModeButton_Click);
             // 
-            // modeTreeModeRepository
-            // 
-            this.modeTreeModeRepository.AutoHeight = false;
-            this.modeTreeModeRepository.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
-            this.modeTreeModeRepository.Name = "modeTreeModeRepository";
-            // 
-            // sortiesTreePilotRepository
-            // 
-            this.sortiesTreePilotRepository.AutoHeight = false;
-            this.sortiesTreePilotRepository.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
-            this.sortiesTreePilotRepository.MaxLength = 3;
-            this.sortiesTreePilotRepository.Name = "sortiesTreePilotRepository";
-            // 
-            // sortiesTreeTailNumberRepository
-            // 
-            this.sortiesTreeTailNumberRepository.AutoHeight = false;
-            this.sortiesTreeTailNumberRepository.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
-            this.sortiesTreeTailNumberRepository.MaxLength = 4;
-            this.sortiesTreeTailNumberRepository.Name = "sortiesTreeTailNumberRepository";
-            // 
             // CheckInForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -271,13 +274,13 @@ namespace windows_theodolite.Forms.Sorties
             this.Name = "CheckInForm";
             this.Text = "Check-in";
             ((System.ComponentModel.ISupportInitialize)(this.modesTree)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.modeTreeModeRepository)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.sortiesTree)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.sortiesTreePilotRepository)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.sortiesTreeTailNumberRepository)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.modeCombo.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pilotEdit.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.tailNumberEdit.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.modeTreeModeRepository)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.sortiesTreePilotRepository)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.sortiesTreeTailNumberRepository)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
