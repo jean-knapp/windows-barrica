@@ -171,6 +171,7 @@
     <None Include="Resources\check-in-desk.png" />
     <None Include="Resources\theodolite.png" />
     <None Include="Resources\bombs.png" />
+    <Content Include="index.jpg" />
     <Content Include="theodolite.ico" />
   </ItemGroup>
   <ItemGroup>
