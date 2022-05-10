@@ -9,7 +9,7 @@
     <OutputType>WinExe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>windows_theodolite</RootNamespace>
-    <AssemblyName>Knapp Air-to-Surface Impact Measurer</AssemblyName>
+    <AssemblyName>Air-to-Surface Impact Measurer</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <PublishUrl>publish\</PublishUrl>
@@ -192,7 +192,7 @@
 RD /S /Q "$(TargetDir)es"
 RD /S /Q "$(TargetDir)ja"
 RD /S /Q "$(TargetDir)ru"
-ROBOCOPY "$(TargetDir) " "$(TargetDir)Libs\ " /XF "Knapp Air-to-Surface Impact Measurer.exe" *.config /XD Libs /E /IS /MOVE
+ROBOCOPY "$(TargetDir) " "$(TargetDir)Libs\ " /XF "Air-to-Surface Impact Measurer.exe" *.config /XD Libs /E /IS /MOVE
 del "$(TargetDir)Libs\*.pdb"
 del "$(TargetDir)Libs\*.xml"
 del "$(TargetDir)Libs\readme.txt"

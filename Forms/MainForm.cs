@@ -6,8 +6,10 @@ using System;
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Drawing;
+using System.Globalization;
 using System.IO;
 using System.Linq;
+using System.Threading;
 using System.Windows.Forms;
 using windows_theodolite.Forms.Export;
 using windows_theodolite.Forms.Settings;
@@ -30,6 +32,8 @@ namespace windows_theodolite.Forms
         public MainForm()
         {
             InitializeComponent();
+
+            Thread.CurrentThread.CurrentCulture = CultureInfo.CreateSpecificCulture("en-GB");
 
             passwordEdit.EditValue = Properties.Settings.Default.EncryptionWord;
 
@@ -350,7 +354,7 @@ namespace windows_theodolite.Forms
                 employmentsTree.Nodes.Clear();
                 return;
             }
-
+            //System.Diagnostics.Debugger.Break();
             SetEmployments(lines);
 
             if (employmentsTree.Nodes.Count == 0)
@@ -372,17 +376,17 @@ namespace windows_theodolite.Forms
             foreach (TreeListNode employment in employmentsTree.Nodes)
             {
                 string[] cells = new string[] {
-                    employment["pilot"]?.ToString(),
-                    employment["tailNumber"]?.ToString(),
-                    employment["mode"]?.ToString(),
-                    employment["heading"]?.ToString(),
-                    employment["datetime"]?.ToString(),
-                    employment["primaryFlag"]?.ToString(),
-                    employment["secondaryFlag"]?.ToString(),
-                    employment["distance"]?.ToString(),
-                    employment["direction"]?.ToString(),
-                    employment["hits"]?.ToString(),
-                    employment["comments"]?.ToString()
+                    employment["pilot"]?.ToString().Replace(",", "."),
+                    employment["tailNumber"]?.ToString().Replace(",", "."),
+                    employment["mode"]?.ToString().Replace(",", "."),
+                    employment["heading"]?.ToString().Replace(",", "."),
+                    employment["datetime"]?.ToString().Replace(",", "."),
+                    employment["primaryFlag"]?.ToString().Replace(",", "."),
+                    employment["secondaryFlag"]?.ToString().Replace(",", "."),
+                    employment["distance"]?.ToString().Replace(",", "."),
+                    employment["direction"]?.ToString().Replace(",", "."),
+                    employment["hits"]?.ToString().Replace(",", "."),
+                    employment["comments"]?.ToString().Replace(",", ".")
                 };
 
                 lines.Add(string.Join(",", cells));
@@ -395,13 +399,17 @@ namespace windows_theodolite.Forms
         {
             employmentsTree.BeginUnboundLoad();
             bool first = true;
-            foreach(string line in lines)
+
+            //System.Diagnostics.Debugger.Break();
+            foreach (string line in lines)
             {
                 if (first)
                 {
                     first = false;
                     continue;
                 }
+
+                //System.Diagnostics.Debugger.Break();
                 string[] cells = line.Split(',');
                 if (cells.Length != 11)
                     continue;

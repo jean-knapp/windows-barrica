@@ -223,10 +223,8 @@ namespace windows_theodolite.Forms
             this.barEditItem1,
             this.passwordEdit});
             this.ribbon.Location = new System.Drawing.Point(0, 0);
-            this.ribbon.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.ribbon.MaxItemId = 15;
             this.ribbon.Name = "ribbon";
-            this.ribbon.OptionsMenuMinWidth = 385;
             this.ribbon.Pages.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPage[] {
             this.ribbonPage1,
             this.ribbonPage2});
@@ -240,7 +238,7 @@ namespace windows_theodolite.Forms
             this.ribbon.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonControlStyle.Office2019;
             this.ribbon.ShowApplicationButton = DevExpress.Utils.DefaultBoolean.True;
             this.ribbon.ShowSearchItem = true;
-            this.ribbon.Size = new System.Drawing.Size(1347, 193);
+            this.ribbon.Size = new System.Drawing.Size(1155, 158);
             this.ribbon.StatusBar = this.ribbonStatusBar;
             // 
             // backstage
@@ -251,13 +249,12 @@ namespace windows_theodolite.Forms
             this.backstage.Items.Add(this.backstageSaveItem);
             this.backstage.Items.Add(this.backstageViewItemSeparator1);
             this.backstage.Items.Add(this.backstageExitItem);
-            this.backstage.Location = new System.Drawing.Point(512, 53);
-            this.backstage.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.backstage.Location = new System.Drawing.Point(439, 43);
             this.backstage.Name = "backstage";
             this.backstage.OwnerControl = this.ribbon;
             this.backstage.SelectedTab = this.backstageOpenItem;
             this.backstage.SelectedTabIndex = 0;
-            this.backstage.Size = new System.Drawing.Size(136, 104);
+            this.backstage.Size = new System.Drawing.Size(117, 84);
             this.backstage.TabIndex = 34;
             this.backstage.VisibleInDesignTime = true;
             this.backstage.Showing += new System.EventHandler(this.backstage_Showing);
@@ -265,10 +262,9 @@ namespace windows_theodolite.Forms
             // backstageViewClientControl1
             // 
             this.backstageViewClientControl1.Controls.Add(this.recentItemControl1);
-            this.backstageViewClientControl1.Location = new System.Drawing.Point(140, 78);
-            this.backstageViewClientControl1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.backstageViewClientControl1.Location = new System.Drawing.Point(132, 63);
             this.backstageViewClientControl1.Name = "backstageViewClientControl1";
-            this.backstageViewClientControl1.Size = new System.Drawing.Size(0, 25);
+            this.backstageViewClientControl1.Size = new System.Drawing.Size(0, 20);
             this.backstageViewClientControl1.TabIndex = 1;
             // 
             // recentItemControl1
@@ -278,12 +274,11 @@ namespace windows_theodolite.Forms
             this.recentItemControl1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.recentItemControl1.Location = new System.Drawing.Point(0, 0);
             this.recentItemControl1.MainPanel = this.recentStackPanel1;
-            this.recentItemControl1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.recentItemControl1.MinimumSize = new System.Drawing.Size(490, 123);
+            this.recentItemControl1.MinimumSize = new System.Drawing.Size(420, 100);
             this.recentItemControl1.Name = "recentItemControl1";
             this.recentItemControl1.SelectedTab = this.openRecentButton;
-            this.recentItemControl1.Size = new System.Drawing.Size(490, 123);
-            this.recentItemControl1.SplitterPosition = 370;
+            this.recentItemControl1.Size = new System.Drawing.Size(420, 100);
+            this.recentItemControl1.SplitterPosition = 317;
             this.recentItemControl1.TabIndex = 0;
             this.recentItemControl1.Title = "Open";
             // 
@@ -339,10 +334,9 @@ namespace windows_theodolite.Forms
             // backstageViewClientControl2
             // 
             this.backstageViewClientControl2.Controls.Add(this.recentItemControl2);
-            this.backstageViewClientControl2.Location = new System.Drawing.Point(140, 62);
-            this.backstageViewClientControl2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.backstageViewClientControl2.Location = new System.Drawing.Point(132, 63);
             this.backstageViewClientControl2.Name = "backstageViewClientControl2";
-            this.backstageViewClientControl2.Size = new System.Drawing.Size(0, 42);
+            this.backstageViewClientControl2.Size = new System.Drawing.Size(0, 20);
             this.backstageViewClientControl2.TabIndex = 2;
             // 
             // recentItemControl2
@@ -352,12 +346,11 @@ namespace windows_theodolite.Forms
             this.recentItemControl2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.recentItemControl2.Location = new System.Drawing.Point(0, 0);
             this.recentItemControl2.MainPanel = this.recentStackPanel3;
-            this.recentItemControl2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.recentItemControl2.MinimumSize = new System.Drawing.Size(490, 123);
+            this.recentItemControl2.MinimumSize = new System.Drawing.Size(420, 100);
             this.recentItemControl2.Name = "recentItemControl2";
             this.recentItemControl2.SelectedTab = null;
-            this.recentItemControl2.Size = new System.Drawing.Size(490, 123);
-            this.recentItemControl2.SplitterPosition = 370;
+            this.recentItemControl2.Size = new System.Drawing.Size(420, 100);
+            this.recentItemControl2.SplitterPosition = 317;
             this.recentItemControl2.TabIndex = 0;
             this.recentItemControl2.Title = "Save";
             // 
@@ -462,7 +455,7 @@ namespace windows_theodolite.Forms
             // 
             // barStaticItem1
             // 
-            this.barStaticItem1.Caption = "2021 - Developed by Jean Knapp";
+            this.barStaticItem1.Caption = "2021-2022 - Developed by Jean Knapp";
             this.barStaticItem1.Id = 4;
             this.barStaticItem1.Name = "barStaticItem1";
             // 
@@ -623,11 +616,10 @@ namespace windows_theodolite.Forms
             // ribbonStatusBar
             // 
             this.ribbonStatusBar.ItemLinks.Add(this.barStaticItem1);
-            this.ribbonStatusBar.Location = new System.Drawing.Point(0, 720);
-            this.ribbonStatusBar.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.ribbonStatusBar.Location = new System.Drawing.Point(0, 586);
             this.ribbonStatusBar.Name = "ribbonStatusBar";
             this.ribbonStatusBar.Ribbon = this.ribbon;
-            this.ribbonStatusBar.Size = new System.Drawing.Size(1347, 28);
+            this.ribbonStatusBar.Size = new System.Drawing.Size(1155, 22);
             // 
             // employmentsTree
             // 
@@ -655,10 +647,8 @@ namespace windows_theodolite.Forms
             this.treeListColumn13});
             this.employmentsTree.Dock = System.Windows.Forms.DockStyle.Fill;
             this.employmentsTree.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.employmentsTree.Location = new System.Drawing.Point(0, 193);
-            this.employmentsTree.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.employmentsTree.Location = new System.Drawing.Point(0, 158);
             this.employmentsTree.MenuManager = this.ribbon;
-            this.employmentsTree.MinWidth = 23;
             this.employmentsTree.Name = "employmentsTree";
             this.employmentsTree.OptionsCustomization.AllowSort = false;
             this.employmentsTree.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] {
@@ -669,10 +659,9 @@ namespace windows_theodolite.Forms
             this.repositoryDistanceEdit,
             this.repositoryDirectionEdit,
             this.repositoryHitsEdit});
-            this.employmentsTree.Size = new System.Drawing.Size(1347, 378);
+            this.employmentsTree.Size = new System.Drawing.Size(1155, 307);
             this.employmentsTree.TabIndex = 6;
             this.employmentsTree.TabStop = false;
-            this.employmentsTree.TreeLevelWidth = 21;
             this.employmentsTree.CellValueChanged += new DevExpress.XtraTreeList.CellValueChangedEventHandler(this.employmentsTree_CellValueChanged);
             // 
             // treeListBand1
@@ -681,20 +670,17 @@ namespace windows_theodolite.Forms
             this.treeListBand1.Columns.Add(this.treeListColumn1);
             this.treeListBand1.Columns.Add(this.treeListColumn2);
             this.treeListBand1.Columns.Add(this.treeListColumn3);
-            this.treeListBand1.MinWidth = 23;
             this.treeListBand1.Name = "treeListBand1";
-            this.treeListBand1.Width = 87;
             // 
             // treeListColumn1
             // 
             this.treeListColumn1.Caption = "Date/time";
             this.treeListColumn1.ColumnEdit = this.repositoryItemDateEdit1;
             this.treeListColumn1.FieldName = "datetime";
-            this.treeListColumn1.MinWidth = 23;
             this.treeListColumn1.Name = "treeListColumn1";
             this.treeListColumn1.Visible = true;
             this.treeListColumn1.VisibleIndex = 0;
-            this.treeListColumn1.Width = 106;
+            this.treeListColumn1.Width = 91;
             // 
             // repositoryItemDateEdit1
             // 
@@ -709,21 +695,19 @@ namespace windows_theodolite.Forms
             // 
             this.treeListColumn2.Caption = "Pilot";
             this.treeListColumn2.FieldName = "pilot";
-            this.treeListColumn2.MinWidth = 23;
             this.treeListColumn2.Name = "treeListColumn2";
             this.treeListColumn2.Visible = true;
             this.treeListColumn2.VisibleIndex = 1;
-            this.treeListColumn2.Width = 68;
+            this.treeListColumn2.Width = 58;
             // 
             // treeListColumn3
             // 
             this.treeListColumn3.Caption = "Tail number";
             this.treeListColumn3.FieldName = "tailNumber";
-            this.treeListColumn3.MinWidth = 23;
             this.treeListColumn3.Name = "treeListColumn3";
             this.treeListColumn3.Visible = true;
             this.treeListColumn3.VisibleIndex = 2;
-            this.treeListColumn3.Width = 66;
+            this.treeListColumn3.Width = 57;
             // 
             // treeListBand2
             // 
@@ -733,20 +717,17 @@ namespace windows_theodolite.Forms
             this.treeListBand2.Columns.Add(this.treeListColumn7);
             this.treeListBand2.Columns.Add(this.treeListColumn8);
             this.treeListBand2.Columns.Add(this.treeListColumn5);
-            this.treeListBand2.MinWidth = 23;
             this.treeListBand2.Name = "treeListBand2";
-            this.treeListBand2.Width = 87;
             // 
             // treeListColumn4
             // 
             this.treeListColumn4.Caption = "Heading";
             this.treeListColumn4.ColumnEdit = this.repositoryHeadingEdit;
             this.treeListColumn4.FieldName = "heading";
-            this.treeListColumn4.MinWidth = 23;
             this.treeListColumn4.Name = "treeListColumn4";
             this.treeListColumn4.Visible = true;
             this.treeListColumn4.VisibleIndex = 3;
-            this.treeListColumn4.Width = 71;
+            this.treeListColumn4.Width = 61;
             // 
             // repositoryHeadingEdit
             // 
@@ -766,22 +747,20 @@ namespace windows_theodolite.Forms
             // 
             this.treeListColumn6.Caption = "Mode";
             this.treeListColumn6.FieldName = "mode";
-            this.treeListColumn6.MinWidth = 23;
             this.treeListColumn6.Name = "treeListColumn6";
             this.treeListColumn6.Visible = true;
             this.treeListColumn6.VisibleIndex = 4;
-            this.treeListColumn6.Width = 71;
+            this.treeListColumn6.Width = 61;
             // 
             // treeListColumn7
             // 
             this.treeListColumn7.Caption = "Primary flag";
             this.treeListColumn7.ColumnEdit = this.repositoryPrimaryFlagEdit;
             this.treeListColumn7.FieldName = "primaryFlag";
-            this.treeListColumn7.MinWidth = 23;
             this.treeListColumn7.Name = "treeListColumn7";
             this.treeListColumn7.Visible = true;
             this.treeListColumn7.VisibleIndex = 5;
-            this.treeListColumn7.Width = 71;
+            this.treeListColumn7.Width = 61;
             // 
             // repositoryPrimaryFlagEdit
             // 
@@ -797,11 +776,10 @@ namespace windows_theodolite.Forms
             this.treeListColumn8.Caption = "Secondary flag";
             this.treeListColumn8.ColumnEdit = this.repositorySecondaryFlagEdit;
             this.treeListColumn8.FieldName = "secondaryFlag";
-            this.treeListColumn8.MinWidth = 23;
             this.treeListColumn8.Name = "treeListColumn8";
             this.treeListColumn8.Visible = true;
             this.treeListColumn8.VisibleIndex = 6;
-            this.treeListColumn8.Width = 70;
+            this.treeListColumn8.Width = 60;
             // 
             // repositorySecondaryFlagEdit
             // 
@@ -816,11 +794,9 @@ namespace windows_theodolite.Forms
             // 
             this.treeListColumn5.Caption = "Comments";
             this.treeListColumn5.FieldName = "comments";
-            this.treeListColumn5.MinWidth = 23;
             this.treeListColumn5.Name = "treeListColumn5";
             this.treeListColumn5.Visible = true;
             this.treeListColumn5.VisibleIndex = 7;
-            this.treeListColumn5.Width = 87;
             // 
             // treeListBand3
             // 
@@ -830,20 +806,17 @@ namespace windows_theodolite.Forms
             this.treeListBand3.Columns.Add(this.treeListColumn11);
             this.treeListBand3.Columns.Add(this.treeListColumn12);
             this.treeListBand3.Columns.Add(this.treeListColumn13);
-            this.treeListBand3.MinWidth = 23;
             this.treeListBand3.Name = "treeListBand3";
-            this.treeListBand3.Width = 87;
             // 
             // treeListColumn9
             // 
             this.treeListColumn9.Caption = "Distance";
             this.treeListColumn9.ColumnEdit = this.repositoryDistanceEdit;
             this.treeListColumn9.FieldName = "distance";
-            this.treeListColumn9.MinWidth = 23;
             this.treeListColumn9.Name = "treeListColumn9";
             this.treeListColumn9.Visible = true;
             this.treeListColumn9.VisibleIndex = 8;
-            this.treeListColumn9.Width = 65;
+            this.treeListColumn9.Width = 56;
             // 
             // repositoryDistanceEdit
             // 
@@ -862,11 +835,10 @@ namespace windows_theodolite.Forms
             this.treeListColumn10.Caption = "Direction";
             this.treeListColumn10.ColumnEdit = this.repositoryDirectionEdit;
             this.treeListColumn10.FieldName = "direction";
-            this.treeListColumn10.MinWidth = 23;
             this.treeListColumn10.Name = "treeListColumn10";
             this.treeListColumn10.Visible = true;
             this.treeListColumn10.VisibleIndex = 9;
-            this.treeListColumn10.Width = 65;
+            this.treeListColumn10.Width = 56;
             // 
             // repositoryDirectionEdit
             // 
@@ -890,11 +862,10 @@ namespace windows_theodolite.Forms
             this.treeListColumn11.Caption = "Hits";
             this.treeListColumn11.ColumnEdit = this.repositoryHitsEdit;
             this.treeListColumn11.FieldName = "hits";
-            this.treeListColumn11.MinWidth = 23;
             this.treeListColumn11.Name = "treeListColumn11";
             this.treeListColumn11.Visible = true;
             this.treeListColumn11.VisibleIndex = 10;
-            this.treeListColumn11.Width = 65;
+            this.treeListColumn11.Width = 56;
             // 
             // repositoryHitsEdit
             // 
@@ -912,24 +883,27 @@ namespace windows_theodolite.Forms
             // 
             this.treeListColumn12.Caption = "DX";
             this.treeListColumn12.FieldName = "x";
+            this.treeListColumn12.MinWidth = 17;
             this.treeListColumn12.Name = "treeListColumn12";
             this.treeListColumn12.Visible = true;
             this.treeListColumn12.VisibleIndex = 11;
+            this.treeListColumn12.Width = 64;
             // 
             // treeListColumn13
             // 
             this.treeListColumn13.Caption = "DY";
             this.treeListColumn13.FieldName = "y";
+            this.treeListColumn13.MinWidth = 17;
             this.treeListColumn13.Name = "treeListColumn13";
             this.treeListColumn13.Visible = true;
             this.treeListColumn13.VisibleIndex = 12;
+            this.treeListColumn13.Width = 64;
             // 
             // modeEdit
             // 
             this.modeEdit.EditValue = "";
             this.modeEdit.Enabled = false;
-            this.modeEdit.Location = new System.Drawing.Point(129, 42);
-            this.modeEdit.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.modeEdit.Location = new System.Drawing.Point(111, 34);
             this.modeEdit.MenuManager = this.ribbon;
             this.modeEdit.Name = "modeEdit";
             this.modeEdit.Properties.AllowNullInput = DevExpress.Utils.DefaultBoolean.False;
@@ -941,7 +915,7 @@ namespace windows_theodolite.Forms
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.modeEdit.Properties.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.modeEdit.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
-            this.modeEdit.Size = new System.Drawing.Size(117, 42);
+            this.modeEdit.Size = new System.Drawing.Size(100, 36);
             toolTipTitleItem7.Text = "Mode";
             toolTipItem16.Text = "Select the mode of the next employment.";
             superToolTip7.Items.Add(toolTipTitleItem7);
@@ -955,15 +929,14 @@ namespace windows_theodolite.Forms
             // 
             this.secondaryFlagEdit.EditValue = "";
             this.secondaryFlagEdit.Enabled = false;
-            this.secondaryFlagEdit.Location = new System.Drawing.Point(500, 42);
-            this.secondaryFlagEdit.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.secondaryFlagEdit.Location = new System.Drawing.Point(429, 34);
             this.secondaryFlagEdit.MenuManager = this.ribbon;
             this.secondaryFlagEdit.Name = "secondaryFlagEdit";
             this.secondaryFlagEdit.Properties.AllowNullInput = DevExpress.Utils.DefaultBoolean.False;
             this.secondaryFlagEdit.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.secondaryFlagEdit.Properties.Appearance.Options.UseFont = true;
             this.secondaryFlagEdit.Properties.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
-            this.secondaryFlagEdit.Size = new System.Drawing.Size(117, 42);
+            this.secondaryFlagEdit.Size = new System.Drawing.Size(100, 36);
             toolTipTitleItem8.Text = "Secondary tower";
             toolTipItem17.Text = "Insert the value observed in the theodolite of the secondary tower.";
             superToolTip8.Items.Add(toolTipTitleItem8);
@@ -976,10 +949,9 @@ namespace windows_theodolite.Forms
             // 
             this.headingLabel.Appearance.Font = new System.Drawing.Font("Tahoma", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.headingLabel.Appearance.Options.UseFont = true;
-            this.headingLabel.Location = new System.Drawing.Point(6, 6);
-            this.headingLabel.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.headingLabel.Location = new System.Drawing.Point(5, 5);
             this.headingLabel.Name = "headingLabel";
-            this.headingLabel.Size = new System.Drawing.Size(86, 29);
+            this.headingLabel.Size = new System.Drawing.Size(70, 23);
             this.headingLabel.TabIndex = 14;
             this.headingLabel.Text = "Heading";
             // 
@@ -987,10 +959,9 @@ namespace windows_theodolite.Forms
             // 
             this.modeLabel.Appearance.Font = new System.Drawing.Font("Tahoma", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.modeLabel.Appearance.Options.UseFont = true;
-            this.modeLabel.Location = new System.Drawing.Point(129, 6);
-            this.modeLabel.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.modeLabel.Location = new System.Drawing.Point(111, 5);
             this.modeLabel.Name = "modeLabel";
-            this.modeLabel.Size = new System.Drawing.Size(58, 29);
+            this.modeLabel.Size = new System.Drawing.Size(46, 23);
             this.modeLabel.TabIndex = 15;
             this.modeLabel.Text = "Mode";
             // 
@@ -998,10 +969,9 @@ namespace windows_theodolite.Forms
             // 
             this.primaryFlagLabel.Appearance.Font = new System.Drawing.Font("Tahoma", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.primaryFlagLabel.Appearance.Options.UseFont = true;
-            this.primaryFlagLabel.Location = new System.Drawing.Point(377, 6);
-            this.primaryFlagLabel.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.primaryFlagLabel.Location = new System.Drawing.Point(323, 5);
             this.primaryFlagLabel.Name = "primaryFlagLabel";
-            this.primaryFlagLabel.Size = new System.Drawing.Size(81, 29);
+            this.primaryFlagLabel.Size = new System.Drawing.Size(64, 23);
             this.primaryFlagLabel.TabIndex = 16;
             this.primaryFlagLabel.Text = "Pri. flag";
             // 
@@ -1009,10 +979,9 @@ namespace windows_theodolite.Forms
             // 
             this.secondaryFlagLabel.Appearance.Font = new System.Drawing.Font("Tahoma", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.secondaryFlagLabel.Appearance.Options.UseFont = true;
-            this.secondaryFlagLabel.Location = new System.Drawing.Point(500, 6);
-            this.secondaryFlagLabel.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.secondaryFlagLabel.Location = new System.Drawing.Point(429, 5);
             this.secondaryFlagLabel.Name = "secondaryFlagLabel";
-            this.secondaryFlagLabel.Size = new System.Drawing.Size(91, 29);
+            this.secondaryFlagLabel.Size = new System.Drawing.Size(73, 23);
             this.secondaryFlagLabel.TabIndex = 17;
             this.secondaryFlagLabel.Text = "Sec. flag";
             // 
@@ -1020,8 +989,7 @@ namespace windows_theodolite.Forms
             // 
             this.pilotEdit.EditValue = "";
             this.pilotEdit.Enabled = false;
-            this.pilotEdit.Location = new System.Drawing.Point(253, 42);
-            this.pilotEdit.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.pilotEdit.Location = new System.Drawing.Point(217, 34);
             this.pilotEdit.MenuManager = this.ribbon;
             this.pilotEdit.Name = "pilotEdit";
             this.pilotEdit.Properties.AllowNullInput = DevExpress.Utils.DefaultBoolean.False;
@@ -1033,7 +1001,7 @@ namespace windows_theodolite.Forms
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.pilotEdit.Properties.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.pilotEdit.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
-            this.pilotEdit.Size = new System.Drawing.Size(117, 42);
+            this.pilotEdit.Size = new System.Drawing.Size(100, 36);
             toolTipTitleItem9.Text = "Pilot";
             toolTipItem18.Text = "Select the pilot about to employ any weapons.";
             superToolTip9.Items.Add(toolTipTitleItem9);
@@ -1046,10 +1014,9 @@ namespace windows_theodolite.Forms
             // 
             this.pilotLabel.Appearance.Font = new System.Drawing.Font("Tahoma", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.pilotLabel.Appearance.Options.UseFont = true;
-            this.pilotLabel.Location = new System.Drawing.Point(253, 6);
-            this.pilotLabel.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.pilotLabel.Location = new System.Drawing.Point(217, 5);
             this.pilotLabel.Name = "pilotLabel";
-            this.pilotLabel.Size = new System.Drawing.Size(44, 29);
+            this.pilotLabel.Size = new System.Drawing.Size(34, 23);
             this.pilotLabel.TabIndex = 19;
             this.pilotLabel.Text = "Pilot";
             // 
@@ -1057,15 +1024,14 @@ namespace windows_theodolite.Forms
             // 
             this.hitsEdit.EditValue = "";
             this.hitsEdit.Enabled = false;
-            this.hitsEdit.Location = new System.Drawing.Point(624, 42);
-            this.hitsEdit.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.hitsEdit.Location = new System.Drawing.Point(535, 34);
             this.hitsEdit.MenuManager = this.ribbon;
             this.hitsEdit.Name = "hitsEdit";
             this.hitsEdit.Properties.AllowNullInput = DevExpress.Utils.DefaultBoolean.False;
             this.hitsEdit.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.hitsEdit.Properties.Appearance.Options.UseFont = true;
             this.hitsEdit.Properties.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
-            this.hitsEdit.Size = new System.Drawing.Size(117, 42);
+            this.hitsEdit.Size = new System.Drawing.Size(100, 36);
             toolTipTitleItem10.Text = "Hits";
             toolTipItem19.Text = "Insert the amount of observed munition hits.";
             superToolTip10.Items.Add(toolTipTitleItem10);
@@ -1078,10 +1044,9 @@ namespace windows_theodolite.Forms
             // 
             this.hitsLabel.Appearance.Font = new System.Drawing.Font("Tahoma", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.hitsLabel.Appearance.Options.UseFont = true;
-            this.hitsLabel.Location = new System.Drawing.Point(624, 6);
-            this.hitsLabel.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.hitsLabel.Location = new System.Drawing.Point(535, 5);
             this.hitsLabel.Name = "hitsLabel";
-            this.hitsLabel.Size = new System.Drawing.Size(40, 29);
+            this.hitsLabel.Size = new System.Drawing.Size(31, 23);
             this.hitsLabel.TabIndex = 21;
             this.hitsLabel.Text = "Hits";
             // 
@@ -1092,10 +1057,9 @@ namespace windows_theodolite.Forms
             this.saveButton.Appearance.Options.UseBackColor = true;
             this.saveButton.Appearance.Options.UseFont = true;
             this.saveButton.Enabled = false;
-            this.saveButton.Location = new System.Drawing.Point(624, 94);
-            this.saveButton.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.saveButton.Location = new System.Drawing.Point(535, 76);
             this.saveButton.Name = "saveButton";
-            this.saveButton.Size = new System.Drawing.Size(117, 37);
+            this.saveButton.Size = new System.Drawing.Size(100, 30);
             toolTipTitleItem11.Text = "Save";
             toolTipItem20.Text = "Adds the employment to the table. You can edit the data directly in the table aft" +
     "er you press Save.";
@@ -1111,10 +1075,9 @@ namespace windows_theodolite.Forms
             this.clearButton.Appearance.Font = new System.Drawing.Font("Tahoma", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.clearButton.Appearance.Options.UseFont = true;
             this.clearButton.Enabled = false;
-            this.clearButton.Location = new System.Drawing.Point(500, 94);
-            this.clearButton.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.clearButton.Location = new System.Drawing.Point(429, 76);
             this.clearButton.Name = "clearButton";
-            this.clearButton.Size = new System.Drawing.Size(117, 37);
+            this.clearButton.Size = new System.Drawing.Size(100, 30);
             toolTipTitleItem12.Text = "Clear";
             toolTipItem21.Text = "Clears the inserted data in case the employment was aborted.";
             superToolTip12.Items.Add(toolTipTitleItem12);
@@ -1128,15 +1091,14 @@ namespace windows_theodolite.Forms
             // 
             this.primaryFlagEdit.EditValue = "";
             this.primaryFlagEdit.Enabled = false;
-            this.primaryFlagEdit.Location = new System.Drawing.Point(377, 42);
-            this.primaryFlagEdit.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.primaryFlagEdit.Location = new System.Drawing.Point(323, 34);
             this.primaryFlagEdit.MenuManager = this.ribbon;
             this.primaryFlagEdit.Name = "primaryFlagEdit";
             this.primaryFlagEdit.Properties.AllowNullInput = DevExpress.Utils.DefaultBoolean.False;
             this.primaryFlagEdit.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.primaryFlagEdit.Properties.Appearance.Options.UseFont = true;
             this.primaryFlagEdit.Properties.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
-            this.primaryFlagEdit.Size = new System.Drawing.Size(117, 42);
+            this.primaryFlagEdit.Size = new System.Drawing.Size(100, 36);
             toolTipTitleItem13.Text = "Primary flag";
             toolTipItem22.Text = "Insert the value observed in the theodolite of the primary tower.";
             superToolTip13.Items.Add(toolTipTitleItem13);
@@ -1149,15 +1111,14 @@ namespace windows_theodolite.Forms
             // 
             this.headingEdit.EditValue = "";
             this.headingEdit.Enabled = false;
-            this.headingEdit.Location = new System.Drawing.Point(6, 42);
-            this.headingEdit.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.headingEdit.Location = new System.Drawing.Point(5, 34);
             this.headingEdit.MenuManager = this.ribbon;
             this.headingEdit.Name = "headingEdit";
             this.headingEdit.Properties.AllowNullInput = DevExpress.Utils.DefaultBoolean.False;
             this.headingEdit.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.headingEdit.Properties.Appearance.Options.UseFont = true;
             this.headingEdit.Properties.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
-            this.headingEdit.Size = new System.Drawing.Size(117, 42);
+            this.headingEdit.Size = new System.Drawing.Size(100, 36);
             toolTipTitleItem14.Text = "Heading";
             toolTipItem23.Text = "Select the final attack heading of the next employment.";
             superToolTip14.Items.Add(toolTipTitleItem14);
@@ -1186,24 +1147,22 @@ namespace windows_theodolite.Forms
             this.panelControl1.Controls.Add(this.primaryFlagLabel);
             this.panelControl1.Controls.Add(this.secondaryFlagLabel);
             this.panelControl1.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panelControl1.Location = new System.Drawing.Point(0, 571);
-            this.panelControl1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.panelControl1.Location = new System.Drawing.Point(0, 465);
             this.panelControl1.Name = "panelControl1";
-            this.panelControl1.Size = new System.Drawing.Size(1347, 149);
+            this.panelControl1.Size = new System.Drawing.Size(1155, 121);
             this.panelControl1.TabIndex = 28;
             // 
             // commentsEdit
             // 
             this.commentsEdit.EditValue = "";
             this.commentsEdit.Enabled = false;
-            this.commentsEdit.Location = new System.Drawing.Point(129, 94);
-            this.commentsEdit.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.commentsEdit.Location = new System.Drawing.Point(111, 76);
             this.commentsEdit.MenuManager = this.ribbon;
             this.commentsEdit.Name = "commentsEdit";
             this.commentsEdit.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.commentsEdit.Properties.Appearance.Options.UseFont = true;
             this.commentsEdit.Properties.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
-            this.commentsEdit.Size = new System.Drawing.Size(364, 42);
+            this.commentsEdit.Size = new System.Drawing.Size(312, 36);
             toolTipTitleItem15.Text = "Comments";
             toolTipItem24.Text = "Insert relevant comments, if any, like fouls or penalties of this employment.";
             superToolTip15.Items.Add(toolTipTitleItem15);
@@ -1215,10 +1174,9 @@ namespace windows_theodolite.Forms
             // 
             this.labelControl1.Appearance.Font = new System.Drawing.Font("Tahoma", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelControl1.Appearance.Options.UseFont = true;
-            this.labelControl1.Location = new System.Drawing.Point(6, 94);
-            this.labelControl1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.labelControl1.Location = new System.Drawing.Point(5, 76);
             this.labelControl1.Name = "labelControl1";
-            this.labelControl1.Size = new System.Drawing.Size(112, 29);
+            this.labelControl1.Size = new System.Drawing.Size(88, 23);
             this.labelControl1.TabIndex = 26;
             this.labelControl1.Text = "Comments";
             // 
@@ -1226,21 +1184,20 @@ namespace windows_theodolite.Forms
             // 
             this.Appearance.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(115)))), ((int)(((byte)(70)))));
             this.Appearance.Options.UseBackColor = true;
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1347, 748);
+            this.ClientSize = new System.Drawing.Size(1155, 608);
             this.Controls.Add(this.backstage);
             this.Controls.Add(this.employmentsTree);
             this.Controls.Add(this.panelControl1);
             this.Controls.Add(this.ribbonStatusBar);
             this.Controls.Add(this.ribbon);
             this.IconOptions.Icon = ((System.Drawing.Icon)(resources.GetObject("MainForm.IconOptions.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.MinimumSize = new System.Drawing.Size(642, 1);
             this.Name = "MainForm";
             this.Ribbon = this.ribbon;
             this.StatusBar = this.ribbonStatusBar;
-            this.Text = "Knapp Air-to-surface Impact Measurer";
+            this.Text = "Air-to-surface Impact Measurer";
             ((System.ComponentModel.ISupportInitialize)(this.ribbon)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.backstage)).EndInit();
             this.backstage.ResumeLayout(false);
