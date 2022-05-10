@@ -76,7 +76,7 @@ namespace windows_theodolite.Forms
                 validHits = false;
             }
 
-            (float distance, float direction) = getDistanceAndPosition(primaryFlag, secondaryFlag);
+            (float distance, float direction, float x, float y) = getDistanceAndPosition(primaryFlag, secondaryFlag);
 
             if (validFlags)
             {
@@ -96,7 +96,7 @@ namespace windows_theodolite.Forms
             pilotEdit.EditValue = "";
             commentsEdit.EditValue = "";
 
-            TreeListNode node = employmentsTree.AppendNode(new object[] { date, pilot, tailNumber, heading, mode, (validFlags ? primaryFlag.ToString() : ""), (validFlags ? secondaryFlag.ToString() : ""), (validFlags? distance.ToString() : ""), (validFlags? direction.ToString() : ""), (validHits ? hits.ToString() : ""), comments }, null);
+            TreeListNode node = employmentsTree.AppendNode(new object[] { date, pilot, tailNumber, heading, mode, (validFlags ? primaryFlag.ToString() : ""), (validFlags ? secondaryFlag.ToString() : ""), (validFlags? distance.ToString() : ""), (validFlags? direction.ToString() : ""), (validHits ? hits.ToString() : ""), comments, (validFlags ? DX(x) : ""), (validFlags ? DY(y) : "") }, null);
             employmentsTree.FocusedNode = node;
 
             pilotEdit.Focus();
@@ -201,7 +201,13 @@ namespace windows_theodolite.Forms
             }
         }
 
-        public static (float, float) getDistanceAndPosition(int primaryFlag, int secondaryFlag)
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="primaryFlag"></param>
+        /// <param name="secondaryFlag"></param>
+        /// <returns>(distance, position, x, y)</returns>
+        public static (float, float, float, float) getDistanceAndPosition(int primaryFlag, int secondaryFlag)
         {
             // Angle at primary tower between target and secondary tower.
             double  priTowerTargetAngle = Math.Acos((Math.Pow(priTowerTargetDistance, 2) + Math.Pow(towerTowerDistance, 2) - Math.Pow(secTowerTargetDistance, 2)) / 2 / priTowerTargetDistance / towerTowerDistance);
@@ -235,7 +241,7 @@ namespace windows_theodolite.Forms
             if (positionHours < 1)
                 positionHours += 12;
 
-            return ((float)Math.Round(distance, 3), (float)Math.Round(positionHours,1));
+            return ((float)Math.Round(distance, 3), (float)Math.Round(positionHours,1), (float)Math.Round(y), (float)Math.Round(x));
         }
 
         private void rangeSettingsButton_ItemClick(object sender, ItemClickEventArgs e)
@@ -408,9 +414,11 @@ namespace windows_theodolite.Forms
 
                 float distance = 0;
                 float direction = 0;
+                float x = 0;
+                float y = 0;
 
                 if (cells[5] != "" && cells[6] != "")
-                    (distance, direction) = getDistanceAndPosition(int.Parse(cells[5]), int.Parse(cells[6]));
+                    (distance, direction, x, y) = getDistanceAndPosition(int.Parse(cells[5]), int.Parse(cells[6]));
 
                 float heading = defaultHeading;
                 if (cells[3] != "")
@@ -423,9 +431,19 @@ namespace windows_theodolite.Forms
                 if (direction < 1)
                     direction += 12;
 
-                employmentsTree.AppendNode(new object[] { cells[4], cells[0], cells[1], cells[3], cells[2], (cells[5] != "" ? cells[5] : ""), (cells[6] != "" ? cells[6] : ""), (cells[5] != "" && cells[6] != "" ? distance.ToString() : ""), (cells[5] != "" && cells[6] != "" ? direction.ToString() : ""), (cells[9] != "" ? cells[9] : ""), cells[10] }, null);
+                employmentsTree.AppendNode(new object[] { cells[4], cells[0], cells[1], cells[3], cells[2], (cells[5] != "" ? cells[5] : ""), (cells[6] != "" ? cells[6] : ""), (cells[5] != "" && cells[6] != "" ? distance.ToString() : ""), (cells[5] != "" && cells[6] != "" ? direction.ToString() : ""), (cells[9] != "" ? cells[9] : ""), cells[10], (cells[5] != "" && cells[6] != "" ? DX(x) : ""), (cells[5] != "" && cells[6] != "" ? DY(y) : "") }, null);
             }
             employmentsTree.EndUnboundLoad();
+        }
+
+        public string DX(float x)
+        {
+            return Math.Abs(Math.Round(x)) + "" + (Math.Sign(x) >= 0 ? "RT" : "LF");
+        }
+
+        public string DY(float y)
+        {
+            return Math.Abs(Math.Round(y)) + "" + (Math.Sign(y) >= 0 ? "OV" : "UN");
         }
 
         private void employmentsTree_CellValueChanged(object sender, DevExpress.XtraTreeList.CellValueChangedEventArgs e)
@@ -438,7 +456,7 @@ namespace windows_theodolite.Forms
 
             if (primaryFlagStr != "" && secondaryFlagStr != "" && headingStr != "" && int.TryParse(primaryFlagStr, out int primaryflag) && int.TryParse(secondaryFlagStr, out int secondaryFlag) && int.TryParse(headingStr, out int heading))
             {
-                (float distance, float direction) = getDistanceAndPosition(primaryflag, secondaryFlag);
+                (float distance, float direction, float x, float y) = getDistanceAndPosition(primaryflag, secondaryFlag);
 
 
                 direction -= (heading - defaultHeading) / 30;
@@ -450,10 +468,14 @@ namespace windows_theodolite.Forms
 
                 e.Node["distance"] = distance.ToString();
                 e.Node["direction"] = direction.ToString();
+                e.Node["x"] = DX(x);
+                e.Node["y"] = DY(y);
             } else
             {
                 e.Node["distance"] = "";
                 e.Node["direction"] = "";
+                e.Node["x"] = "";
+                e.Node["y"] = "";
             }
 
             Save();

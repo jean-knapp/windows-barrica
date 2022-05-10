@@ -143,11 +143,13 @@ namespace windows_theodolite.Forms.Export
 
                     float distance = 0;
                     float direction = 0;
+                    float x = 0;
+                    float y = 0;
                     bool validFlags = false;
 
                     if (cells[1] != "" && cells[2] != "" && int.TryParse(cells[1], out int primaryFlag) && int.TryParse(cells[2], out int secondaryFlag))
                     {
-                        (distance, direction) = MainForm.getDistanceAndPosition(primaryFlag, secondaryFlag);
+                        (distance, direction, x, y) = MainForm.getDistanceAndPosition(primaryFlag, secondaryFlag);
                         validFlags = true;
                     }
                     lines[i] = string.Join(",", new string[] { currentPilot, currentTailNumber, currentMode, currentHeading, date + " " + cells[0], cells[1], cells[2], (validFlags ? distance.ToString() : ""), (validFlags ? direction.ToString() : ""), cells[3], cells[4] });
