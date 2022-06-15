@@ -1,2 +1,5 @@
 obj/
 bin/
+Installer/installer-cache/*
+Installer/installer-SetupFiles/*
+Installer/Prerequisites/.NET Framework 4.8/*

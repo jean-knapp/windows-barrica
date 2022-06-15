@@ -24,7 +24,7 @@ namespace windows_theodolite.Forms.Export
             }
             DateTime dateTime = DateTime.Parse(lines[1].Split(',')[4]);
 
-            string fileName = dateTime.ToString("yyyy-MM-dd HHmm'Z'");
+            string fileName = dateTime.ToUniversalTime().ToString("yyyy-MM-dd HHmm'Z'");
             List<string> sortiesString = new List<string>();
             foreach ((string, string) sortie in sorties)
                 sortiesString.Add(sortie.Item1 + sortie.Item2);
@@ -45,8 +45,11 @@ namespace windows_theodolite.Forms.Export
             qrCode.Dispose();
         }
 
+        
         public static string CompressData(List<string> lines)
         {
+            // TODO check this
+            //System.Diagnostics.Debugger.Break();
             string date = "";
 
             lines.RemoveAt(0);
@@ -63,7 +66,7 @@ namespace windows_theodolite.Forms.Export
                 if (i == 0)
                 {
                     date = line.Split(',')[4];
-                    date = date.Substring(0, date.IndexOf(" "));
+                    date = string.Concat(date[2], date[3], date[5], date[6], date[8], date[9], date[11], date[12], date[14], date[15], date[17], date[18]);
                 }
 
                 line = line.Replace(date + " ", "");
@@ -110,8 +113,10 @@ namespace windows_theodolite.Forms.Export
             string date = lines[0];
             lines.RemoveAt(0);
 
-            date = date.Substring(0, 4) + "-" + date.Substring(4, 2) + "-" + date.Substring(6, 2);
-            //System.Diagnostics.Debugger.Break();
+            if (date.Length == 12)
+            {
+                date = "20" + date.Substring(0, 2) + "-" + date.Substring(2, 2) + "-" + date.Substring(4, 2) + " " + date.Substring(6, 2) + ":" + date.Substring(8, 2) + ":" + date.Substring(10, 2) + "Z";
+            }
 
             string currentPilot = "";
             string currentTailNumber = "";
@@ -152,7 +157,7 @@ namespace windows_theodolite.Forms.Export
                         (distance, direction, x, y) = MainForm.getDistanceAndPosition(primaryFlag, secondaryFlag);
                         validFlags = true;
                     }
-                    lines[i] = string.Join(",", new string[] { currentPilot, currentTailNumber, currentMode, currentHeading, date + " " + cells[0], cells[1], cells[2], (validFlags ? distance.ToString() : ""), (validFlags ? direction.ToString() : ""), cells[3], cells[4] });
+                    lines[i] = string.Join(",", new string[] { currentPilot, currentTailNumber, currentMode, currentHeading, date, cells[1], cells[2], (validFlags ? distance.ToString() : ""), (validFlags ? direction.ToString() : ""), cells[3], cells[4] });
                 }
             }
 

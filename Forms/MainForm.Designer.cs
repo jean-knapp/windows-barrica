@@ -334,9 +334,9 @@ namespace windows_theodolite.Forms
             // backstageViewClientControl2
             // 
             this.backstageViewClientControl2.Controls.Add(this.recentItemControl2);
-            this.backstageViewClientControl2.Location = new System.Drawing.Point(132, 63);
+            this.backstageViewClientControl2.Location = new System.Drawing.Point(132, 62);
             this.backstageViewClientControl2.Name = "backstageViewClientControl2";
-            this.backstageViewClientControl2.Size = new System.Drawing.Size(0, 20);
+            this.backstageViewClientControl2.Size = new System.Drawing.Size(0, 22);
             this.backstageViewClientControl2.TabIndex = 2;
             // 
             // recentItemControl2
@@ -685,11 +685,21 @@ namespace windows_theodolite.Forms
             // repositoryItemDateEdit1
             // 
             this.repositoryItemDateEdit1.AutoHeight = false;
+            this.repositoryItemDateEdit1.BeepOnError = false;
             this.repositoryItemDateEdit1.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.repositoryItemDateEdit1.CalendarTimeEditing = DevExpress.Utils.DefaultBoolean.True;
+            this.repositoryItemDateEdit1.CalendarTimeProperties.BeepOnError = false;
             this.repositoryItemDateEdit1.CalendarTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.repositoryItemDateEdit1.CalendarTimeProperties.MaskSettings.Set("mask", "u");
+            this.repositoryItemDateEdit1.CalendarTimeProperties.UseMaskAsDisplayFormat = true;
+            this.repositoryItemDateEdit1.EditFormat.FormatString = "g";
+            this.repositoryItemDateEdit1.EditFormat.FormatType = DevExpress.Utils.FormatType.DateTime;
+            this.repositoryItemDateEdit1.MaskSettings.Set("mask", "u");
+            this.repositoryItemDateEdit1.MaskSettings.Set("culture", "");
             this.repositoryItemDateEdit1.Name = "repositoryItemDateEdit1";
+            this.repositoryItemDateEdit1.UseMaskAsDisplayFormat = true;
             // 
             // treeListColumn2
             // 

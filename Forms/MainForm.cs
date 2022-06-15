@@ -52,7 +52,6 @@ namespace windows_theodolite.Forms
 
         private void saveButton_Click(object sender, EventArgs e)
         {
-            string date = DateTime.UtcNow.ToString();
             string pilot = pilotEdit.EditValue.ToString();
 
             if (pilot == "")
@@ -99,8 +98,7 @@ namespace windows_theodolite.Forms
             hitsEdit.EditValue = "";
             pilotEdit.EditValue = "";
             commentsEdit.EditValue = "";
-
-            TreeListNode node = employmentsTree.AppendNode(new object[] { date, pilot, tailNumber, heading, mode, (validFlags ? primaryFlag.ToString() : ""), (validFlags ? secondaryFlag.ToString() : ""), (validFlags? distance.ToString() : ""), (validFlags? direction.ToString() : ""), (validHits ? hits.ToString() : ""), comments, (validFlags ? DX(x) : ""), (validFlags ? DY(y) : "") }, null);
+            TreeListNode node = employmentsTree.AppendNode(new object[] { DateTime.UtcNow, pilot, tailNumber, heading, mode, (validFlags ? primaryFlag.ToString() : ""), (validFlags ? secondaryFlag.ToString() : ""), (validFlags? distance.ToString() : ""), (validFlags? direction.ToString() : ""), (validHits ? hits.ToString() : ""), comments, (validFlags ? DX(x) : ""), (validFlags ? DY(y) : "") }, null);
             employmentsTree.FocusedNode = node;
 
             pilotEdit.Focus();
@@ -303,7 +301,7 @@ namespace windows_theodolite.Forms
 
             DateTime dateTime = DateTime.Parse(employments[1].Split(',')[4]);
 
-            string fileName = dateTime.ToString("yyyy-MM-dd HHmm'Z'");
+            string fileName = dateTime.ToUniversalTime().ToString("yyyy-MM-dd HHmm'Z'");
             List<string> sortiesString = new List<string>();
             foreach ((string, string) sortie in sorties)
                 sortiesString.Add(sortie.Item1 + sortie.Item2);
@@ -354,7 +352,7 @@ namespace windows_theodolite.Forms
                 employmentsTree.Nodes.Clear();
                 return;
             }
-            //System.Diagnostics.Debugger.Break();
+
             SetEmployments(lines);
 
             if (employmentsTree.Nodes.Count == 0)
@@ -375,12 +373,15 @@ namespace windows_theodolite.Forms
             lines.Add("Pilot,Tail Number,Mode,Heading,Date/Time,Primary flag,Secondary flag,Distance,Position,Hits,Comments");
             foreach (TreeListNode employment in employmentsTree.Nodes)
             {
+                DateTime dateTime = DateTime.Parse(employment["datetime"].ToString());
+                string dateStr = dateTime.ToString("u");
+
                 string[] cells = new string[] {
                     employment["pilot"]?.ToString().Replace(",", "."),
                     employment["tailNumber"]?.ToString().Replace(",", "."),
                     employment["mode"]?.ToString().Replace(",", "."),
                     employment["heading"]?.ToString().Replace(",", "."),
-                    employment["datetime"]?.ToString().Replace(",", "."),
+                    dateStr,
                     employment["primaryFlag"]?.ToString().Replace(",", "."),
                     employment["secondaryFlag"]?.ToString().Replace(",", "."),
                     employment["distance"]?.ToString().Replace(",", "."),
@@ -399,8 +400,6 @@ namespace windows_theodolite.Forms
         {
             employmentsTree.BeginUnboundLoad();
             bool first = true;
-
-            //System.Diagnostics.Debugger.Break();
             foreach (string line in lines)
             {
                 if (first)
@@ -409,7 +408,6 @@ namespace windows_theodolite.Forms
                     continue;
                 }
 
-                //System.Diagnostics.Debugger.Break();
                 string[] cells = line.Split(',');
                 if (cells.Length != 11)
                     continue;
@@ -439,7 +437,9 @@ namespace windows_theodolite.Forms
                 if (direction < 1)
                     direction += 12;
 
-                employmentsTree.AppendNode(new object[] { cells[4], cells[0], cells[1], cells[3], cells[2], (cells[5] != "" ? cells[5] : ""), (cells[6] != "" ? cells[6] : ""), (cells[5] != "" && cells[6] != "" ? distance.ToString() : ""), (cells[5] != "" && cells[6] != "" ? direction.ToString() : ""), (cells[9] != "" ? cells[9] : ""), cells[10], (cells[5] != "" && cells[6] != "" ? DX(x) : ""), (cells[5] != "" && cells[6] != "" ? DY(y) : "") }, null);
+                DateTime date = DateTime.Parse(cells[4]).ToUniversalTime();
+
+                employmentsTree.AppendNode(new object[] { date, cells[0], cells[1], cells[3], cells[2], (cells[5] != "" ? cells[5] : ""), (cells[6] != "" ? cells[6] : ""), (cells[5] != "" && cells[6] != "" ? distance.ToString() : ""), (cells[5] != "" && cells[6] != "" ? direction.ToString() : ""), (cells[9] != "" ? cells[9] : ""), cells[10], (cells[5] != "" && cells[6] != "" ? DX(x) : ""), (cells[5] != "" && cells[6] != "" ? DY(y) : "") }, null);
             }
             employmentsTree.EndUnboundLoad();
         }
@@ -538,7 +538,7 @@ namespace windows_theodolite.Forms
                         }
                         //System.Diagnostics.Debugger.Break();
                         string[] lines = ExportQRCodeForm.UncompressData(compressedData).ToArray();
-
+                        //System.Diagnostics.Debugger.Break();
                         SetEmployments(lines);
                         populateCombos();
                         backstage.Close();
