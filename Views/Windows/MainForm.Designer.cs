@@ -30,67 +30,67 @@ namespace windows_theodolite.Views.Windows
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            DevExpress.Utils.SuperToolTip superToolTip15 = new DevExpress.Utils.SuperToolTip();
+            DevExpress.Utils.ToolTipTitleItem toolTipTitleItem15 = new DevExpress.Utils.ToolTipTitleItem();
+            DevExpress.Utils.ToolTipItem toolTipItem22 = new DevExpress.Utils.ToolTipItem();
+            DevExpress.Utils.ToolTipSeparatorItem toolTipSeparatorItem5 = new DevExpress.Utils.ToolTipSeparatorItem();
+            DevExpress.Utils.ToolTipItem toolTipItem23 = new DevExpress.Utils.ToolTipItem();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
-            DevExpress.Utils.SuperToolTip superToolTip1 = new DevExpress.Utils.SuperToolTip();
-            DevExpress.Utils.ToolTipTitleItem toolTipTitleItem1 = new DevExpress.Utils.ToolTipTitleItem();
-            DevExpress.Utils.ToolTipItem toolTipItem1 = new DevExpress.Utils.ToolTipItem();
-            DevExpress.Utils.ToolTipSeparatorItem toolTipSeparatorItem1 = new DevExpress.Utils.ToolTipSeparatorItem();
-            DevExpress.Utils.ToolTipItem toolTipItem2 = new DevExpress.Utils.ToolTipItem();
-            DevExpress.Utils.SuperToolTip superToolTip2 = new DevExpress.Utils.SuperToolTip();
-            DevExpress.Utils.ToolTipTitleItem toolTipTitleItem2 = new DevExpress.Utils.ToolTipTitleItem();
-            DevExpress.Utils.ToolTipItem toolTipItem3 = new DevExpress.Utils.ToolTipItem();
-            DevExpress.Utils.ToolTipSeparatorItem toolTipSeparatorItem2 = new DevExpress.Utils.ToolTipSeparatorItem();
-            DevExpress.Utils.ToolTipItem toolTipItem4 = new DevExpress.Utils.ToolTipItem();
-            DevExpress.Utils.SuperToolTip superToolTip3 = new DevExpress.Utils.SuperToolTip();
-            DevExpress.Utils.ToolTipTitleItem toolTipTitleItem3 = new DevExpress.Utils.ToolTipTitleItem();
-            DevExpress.Utils.ToolTipItem toolTipItem5 = new DevExpress.Utils.ToolTipItem();
-            DevExpress.Utils.ToolTipSeparatorItem toolTipSeparatorItem3 = new DevExpress.Utils.ToolTipSeparatorItem();
-            DevExpress.Utils.ToolTipItem toolTipItem6 = new DevExpress.Utils.ToolTipItem();
-            DevExpress.Utils.SuperToolTip superToolTip4 = new DevExpress.Utils.SuperToolTip();
-            DevExpress.Utils.ToolTipTitleItem toolTipTitleItem4 = new DevExpress.Utils.ToolTipTitleItem();
-            DevExpress.Utils.ToolTipItem toolTipItem7 = new DevExpress.Utils.ToolTipItem();
-            DevExpress.Utils.ToolTipSeparatorItem toolTipSeparatorItem4 = new DevExpress.Utils.ToolTipSeparatorItem();
-            DevExpress.Utils.ToolTipItem toolTipItem8 = new DevExpress.Utils.ToolTipItem();
+            DevExpress.Utils.SuperToolTip superToolTip23 = new DevExpress.Utils.SuperToolTip();
+            DevExpress.Utils.ToolTipTitleItem toolTipTitleItem23 = new DevExpress.Utils.ToolTipTitleItem();
+            DevExpress.Utils.ToolTipItem toolTipItem24 = new DevExpress.Utils.ToolTipItem();
+            DevExpress.Utils.ToolTipSeparatorItem toolTipSeparatorItem6 = new DevExpress.Utils.ToolTipSeparatorItem();
+            DevExpress.Utils.ToolTipItem toolTipItem38 = new DevExpress.Utils.ToolTipItem();
+            DevExpress.Utils.SuperToolTip superToolTip24 = new DevExpress.Utils.SuperToolTip();
+            DevExpress.Utils.ToolTipTitleItem toolTipTitleItem24 = new DevExpress.Utils.ToolTipTitleItem();
+            DevExpress.Utils.ToolTipItem toolTipItem39 = new DevExpress.Utils.ToolTipItem();
+            DevExpress.Utils.ToolTipSeparatorItem toolTipSeparatorItem13 = new DevExpress.Utils.ToolTipSeparatorItem();
+            DevExpress.Utils.ToolTipItem toolTipItem40 = new DevExpress.Utils.ToolTipItem();
+            DevExpress.Utils.SuperToolTip superToolTip25 = new DevExpress.Utils.SuperToolTip();
+            DevExpress.Utils.ToolTipTitleItem toolTipTitleItem25 = new DevExpress.Utils.ToolTipTitleItem();
+            DevExpress.Utils.ToolTipItem toolTipItem41 = new DevExpress.Utils.ToolTipItem();
+            DevExpress.Utils.ToolTipSeparatorItem toolTipSeparatorItem14 = new DevExpress.Utils.ToolTipSeparatorItem();
+            DevExpress.Utils.ToolTipItem toolTipItem42 = new DevExpress.Utils.ToolTipItem();
+            DevExpress.Utils.SuperToolTip superToolTip26 = new DevExpress.Utils.SuperToolTip();
+            DevExpress.Utils.ToolTipTitleItem toolTipTitleItem26 = new DevExpress.Utils.ToolTipTitleItem();
+            DevExpress.Utils.ToolTipItem toolTipItem43 = new DevExpress.Utils.ToolTipItem();
+            DevExpress.Utils.ToolTipItem toolTipItem44 = new DevExpress.Utils.ToolTipItem();
+            DevExpress.Utils.SuperToolTip superToolTip20 = new DevExpress.Utils.SuperToolTip();
+            DevExpress.Utils.ToolTipTitleItem toolTipTitleItem20 = new DevExpress.Utils.ToolTipTitleItem();
+            DevExpress.Utils.ToolTipItem toolTipItem33 = new DevExpress.Utils.ToolTipItem();
+            DevExpress.Utils.ToolTipItem toolTipItem34 = new DevExpress.Utils.ToolTipItem();
+            DevExpress.Utils.ToolTipItem toolTipItem45 = new DevExpress.Utils.ToolTipItem();
+            DevExpress.Utils.ToolTipSeparatorItem toolTipSeparatorItem15 = new DevExpress.Utils.ToolTipSeparatorItem();
+            DevExpress.Utils.ToolTipItem toolTipItem46 = new DevExpress.Utils.ToolTipItem();
+            DevExpress.Utils.ToolTipSeparatorItem toolTipSeparatorItem16 = new DevExpress.Utils.ToolTipSeparatorItem();
+            DevExpress.Utils.ToolTipItem toolTipItem47 = new DevExpress.Utils.ToolTipItem();
             DevExpress.Utils.SuperToolTip superToolTip5 = new DevExpress.Utils.SuperToolTip();
             DevExpress.Utils.ToolTipTitleItem toolTipTitleItem5 = new DevExpress.Utils.ToolTipTitleItem();
             DevExpress.Utils.ToolTipItem toolTipItem9 = new DevExpress.Utils.ToolTipItem();
-            DevExpress.Utils.ToolTipItem toolTipItem10 = new DevExpress.Utils.ToolTipItem();
             DevExpress.Utils.SuperToolTip superToolTip6 = new DevExpress.Utils.SuperToolTip();
             DevExpress.Utils.ToolTipTitleItem toolTipTitleItem6 = new DevExpress.Utils.ToolTipTitleItem();
-            DevExpress.Utils.ToolTipItem toolTipItem11 = new DevExpress.Utils.ToolTipItem();
-            DevExpress.Utils.ToolTipItem toolTipItem12 = new DevExpress.Utils.ToolTipItem();
-            DevExpress.Utils.ToolTipItem toolTipItem13 = new DevExpress.Utils.ToolTipItem();
-            DevExpress.Utils.ToolTipSeparatorItem toolTipSeparatorItem5 = new DevExpress.Utils.ToolTipSeparatorItem();
-            DevExpress.Utils.ToolTipItem toolTipItem14 = new DevExpress.Utils.ToolTipItem();
-            DevExpress.Utils.ToolTipSeparatorItem toolTipSeparatorItem6 = new DevExpress.Utils.ToolTipSeparatorItem();
-            DevExpress.Utils.ToolTipItem toolTipItem15 = new DevExpress.Utils.ToolTipItem();
+            DevExpress.Utils.ToolTipItem toolTipItem10 = new DevExpress.Utils.ToolTipItem();
             DevExpress.Utils.SuperToolTip superToolTip7 = new DevExpress.Utils.SuperToolTip();
             DevExpress.Utils.ToolTipTitleItem toolTipTitleItem7 = new DevExpress.Utils.ToolTipTitleItem();
-            DevExpress.Utils.ToolTipItem toolTipItem16 = new DevExpress.Utils.ToolTipItem();
+            DevExpress.Utils.ToolTipItem toolTipItem11 = new DevExpress.Utils.ToolTipItem();
             DevExpress.Utils.SuperToolTip superToolTip8 = new DevExpress.Utils.SuperToolTip();
             DevExpress.Utils.ToolTipTitleItem toolTipTitleItem8 = new DevExpress.Utils.ToolTipTitleItem();
-            DevExpress.Utils.ToolTipItem toolTipItem17 = new DevExpress.Utils.ToolTipItem();
+            DevExpress.Utils.ToolTipItem toolTipItem12 = new DevExpress.Utils.ToolTipItem();
             DevExpress.Utils.SuperToolTip superToolTip9 = new DevExpress.Utils.SuperToolTip();
             DevExpress.Utils.ToolTipTitleItem toolTipTitleItem9 = new DevExpress.Utils.ToolTipTitleItem();
-            DevExpress.Utils.ToolTipItem toolTipItem18 = new DevExpress.Utils.ToolTipItem();
-            DevExpress.Utils.SuperToolTip superToolTip10 = new DevExpress.Utils.SuperToolTip();
-            DevExpress.Utils.ToolTipTitleItem toolTipTitleItem10 = new DevExpress.Utils.ToolTipTitleItem();
-            DevExpress.Utils.ToolTipItem toolTipItem19 = new DevExpress.Utils.ToolTipItem();
-            DevExpress.Utils.SuperToolTip superToolTip11 = new DevExpress.Utils.SuperToolTip();
-            DevExpress.Utils.ToolTipTitleItem toolTipTitleItem11 = new DevExpress.Utils.ToolTipTitleItem();
-            DevExpress.Utils.ToolTipItem toolTipItem20 = new DevExpress.Utils.ToolTipItem();
-            DevExpress.Utils.SuperToolTip superToolTip12 = new DevExpress.Utils.SuperToolTip();
-            DevExpress.Utils.ToolTipTitleItem toolTipTitleItem12 = new DevExpress.Utils.ToolTipTitleItem();
-            DevExpress.Utils.ToolTipItem toolTipItem21 = new DevExpress.Utils.ToolTipItem();
+            DevExpress.Utils.ToolTipItem toolTipItem13 = new DevExpress.Utils.ToolTipItem();
+            DevExpress.Utils.SuperToolTip superToolTip27 = new DevExpress.Utils.SuperToolTip();
+            DevExpress.Utils.ToolTipTitleItem toolTipTitleItem27 = new DevExpress.Utils.ToolTipTitleItem();
+            DevExpress.Utils.ToolTipItem toolTipItem14 = new DevExpress.Utils.ToolTipItem();
+            DevExpress.Utils.SuperToolTip superToolTip28 = new DevExpress.Utils.SuperToolTip();
+            DevExpress.Utils.ToolTipTitleItem toolTipTitleItem28 = new DevExpress.Utils.ToolTipTitleItem();
+            DevExpress.Utils.ToolTipItem toolTipItem35 = new DevExpress.Utils.ToolTipItem();
+            DevExpress.Utils.SuperToolTip superToolTip22 = new DevExpress.Utils.SuperToolTip();
+            DevExpress.Utils.ToolTipTitleItem toolTipTitleItem22 = new DevExpress.Utils.ToolTipTitleItem();
+            DevExpress.Utils.ToolTipItem toolTipItem17 = new DevExpress.Utils.ToolTipItem();
             DevExpress.Utils.SuperToolTip superToolTip13 = new DevExpress.Utils.SuperToolTip();
             DevExpress.Utils.ToolTipTitleItem toolTipTitleItem13 = new DevExpress.Utils.ToolTipTitleItem();
-            DevExpress.Utils.ToolTipItem toolTipItem22 = new DevExpress.Utils.ToolTipItem();
-            DevExpress.Utils.SuperToolTip superToolTip14 = new DevExpress.Utils.SuperToolTip();
-            DevExpress.Utils.ToolTipTitleItem toolTipTitleItem14 = new DevExpress.Utils.ToolTipTitleItem();
-            DevExpress.Utils.ToolTipItem toolTipItem23 = new DevExpress.Utils.ToolTipItem();
-            DevExpress.Utils.SuperToolTip superToolTip15 = new DevExpress.Utils.SuperToolTip();
-            DevExpress.Utils.ToolTipTitleItem toolTipTitleItem15 = new DevExpress.Utils.ToolTipTitleItem();
-            DevExpress.Utils.ToolTipItem toolTipItem24 = new DevExpress.Utils.ToolTipItem();
+            DevExpress.Utils.ToolTipItem toolTipItem18 = new DevExpress.Utils.ToolTipItem();
             this.ribbon = new DevExpress.XtraBars.Ribbon.RibbonControl();
             this.backstage = new DevExpress.XtraBars.Ribbon.BackstageViewControl();
             this.backstageViewClientControl1 = new DevExpress.XtraBars.Ribbon.BackstageViewClientControl();
@@ -431,14 +431,14 @@ namespace windows_theodolite.Views.Windows
             this.sortiesCheckInButton.ImageOptions.Image = global::windows_theodolite.Properties.Resources.check_in_desk;
             this.sortiesCheckInButton.Name = "sortiesCheckInButton";
             this.sortiesCheckInButton.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large;
-            toolTipTitleItem1.Text = "Check-in";
-            toolTipItem1.Text = "Setup the sorties and the modes of the employments.";
-            toolTipItem2.Text = "Press this button when the flight is about to reach the training range.";
-            superToolTip1.Items.Add(toolTipTitleItem1);
-            superToolTip1.Items.Add(toolTipItem1);
-            superToolTip1.Items.Add(toolTipSeparatorItem1);
-            superToolTip1.Items.Add(toolTipItem2);
-            this.sortiesCheckInButton.SuperTip = superToolTip1;
+            toolTipTitleItem15.Text = "Check-in";
+            toolTipItem22.Text = "Setup the sorties and the modes of the employments.";
+            toolTipItem23.Text = "Press this button when the flight is about to reach the training range.";
+            superToolTip15.Items.Add(toolTipTitleItem15);
+            superToolTip15.Items.Add(toolTipItem22);
+            superToolTip15.Items.Add(toolTipSeparatorItem5);
+            superToolTip15.Items.Add(toolTipItem23);
+            this.sortiesCheckInButton.SuperTip = superToolTip15;
             this.sortiesCheckInButton.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barButtonItem1_ItemClick);
             // 
             // sortiesCheckOutButton
@@ -449,15 +449,15 @@ namespace windows_theodolite.Views.Windows
             this.sortiesCheckOutButton.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("sortiesCheckOutButton.ImageOptions.Image")));
             this.sortiesCheckOutButton.Name = "sortiesCheckOutButton";
             this.sortiesCheckOutButton.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large;
-            toolTipTitleItem2.Text = "Check-out";
-            toolTipItem3.Text = "Clear the table and generates a QR Code with the employment data to be sent to th" +
+            toolTipTitleItem23.Text = "Check-out";
+            toolTipItem24.Text = "Clear the table and generates a QR Code with the employment data to be sent to th" +
     "e weapons officer.";
-            toolTipItem4.Text = "Press this button when the flight is about to leave the training range.";
-            superToolTip2.Items.Add(toolTipTitleItem2);
-            superToolTip2.Items.Add(toolTipItem3);
-            superToolTip2.Items.Add(toolTipSeparatorItem2);
-            superToolTip2.Items.Add(toolTipItem4);
-            this.sortiesCheckOutButton.SuperTip = superToolTip2;
+            toolTipItem38.Text = "Press this button when the flight is about to leave the training range.";
+            superToolTip23.Items.Add(toolTipTitleItem23);
+            superToolTip23.Items.Add(toolTipItem24);
+            superToolTip23.Items.Add(toolTipSeparatorItem6);
+            superToolTip23.Items.Add(toolTipItem38);
+            this.sortiesCheckOutButton.SuperTip = superToolTip23;
             this.sortiesCheckOutButton.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.sortiesCheckOutButton_ItemClick);
             // 
             // barStaticItem1
@@ -473,16 +473,16 @@ namespace windows_theodolite.Views.Windows
             this.rangeSettingsButton.ImageOptions.Image = global::windows_theodolite.Properties.Resources.theodolite;
             this.rangeSettingsButton.Name = "rangeSettingsButton";
             this.rangeSettingsButton.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonItemStyles.SmallWithText;
-            toolTipTitleItem3.Text = "Air Force Range";
-            toolTipItem5.Text = "Set up the range dimensions so the distance and direction of impacts can be calcu" +
+            toolTipTitleItem24.Text = "Air Force Range";
+            toolTipItem39.Text = "Set up the range dimensions so the distance and direction of impacts can be calcu" +
     "lated.";
-            toolTipItem6.Text = "This should be set up by the weapons officer prior to the beginning of the employ" +
+            toolTipItem40.Text = "This should be set up by the weapons officer prior to the beginning of the employ" +
     "ments.";
-            superToolTip3.Items.Add(toolTipTitleItem3);
-            superToolTip3.Items.Add(toolTipItem5);
-            superToolTip3.Items.Add(toolTipSeparatorItem3);
-            superToolTip3.Items.Add(toolTipItem6);
-            this.rangeSettingsButton.SuperTip = superToolTip3;
+            superToolTip24.Items.Add(toolTipTitleItem24);
+            superToolTip24.Items.Add(toolTipItem39);
+            superToolTip24.Items.Add(toolTipSeparatorItem13);
+            superToolTip24.Items.Add(toolTipItem40);
+            this.rangeSettingsButton.SuperTip = superToolTip24;
             this.rangeSettingsButton.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.rangeSettingsButton_ItemClick);
             // 
             // modeSettingsButton
@@ -492,15 +492,15 @@ namespace windows_theodolite.Views.Windows
             this.modeSettingsButton.ImageOptions.Image = global::windows_theodolite.Properties.Resources.bombs;
             this.modeSettingsButton.Name = "modeSettingsButton";
             this.modeSettingsButton.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonItemStyles.SmallWithText;
-            toolTipTitleItem4.Text = "Modes";
-            toolTipItem7.Text = "Set up the modes that can be selected at Check-in.";
-            toolTipItem8.Text = "This should be set up by the weapons officer prior to the beginning of the employ" +
+            toolTipTitleItem25.Text = "Modes";
+            toolTipItem41.Text = "Set up the modes that can be selected at Check-in.";
+            toolTipItem42.Text = "This should be set up by the weapons officer prior to the beginning of the employ" +
     "ments.";
-            superToolTip4.Items.Add(toolTipTitleItem4);
-            superToolTip4.Items.Add(toolTipItem7);
-            superToolTip4.Items.Add(toolTipSeparatorItem4);
-            superToolTip4.Items.Add(toolTipItem8);
-            this.modeSettingsButton.SuperTip = superToolTip4;
+            superToolTip25.Items.Add(toolTipTitleItem25);
+            superToolTip25.Items.Add(toolTipItem41);
+            superToolTip25.Items.Add(toolTipSeparatorItem14);
+            superToolTip25.Items.Add(toolTipItem42);
+            this.modeSettingsButton.SuperTip = superToolTip25;
             this.modeSettingsButton.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.modeSettingsButton_ItemClick);
             // 
             // barEditItem1
@@ -511,13 +511,13 @@ namespace windows_theodolite.Views.Windows
             this.barEditItem1.Enabled = false;
             this.barEditItem1.Id = 13;
             this.barEditItem1.Name = "barEditItem1";
-            toolTipTitleItem5.Text = "AutoSave";
-            toolTipItem9.Text = "AutoSave is always on. You don\'t have to worry about backups. It\'s always saved.";
-            toolTipItem10.Text = "You can access the files in the Recent Tab in the Backstage.";
-            superToolTip5.Items.Add(toolTipTitleItem5);
-            superToolTip5.Items.Add(toolTipItem9);
-            superToolTip5.Items.Add(toolTipItem10);
-            this.barEditItem1.SuperTip = superToolTip5;
+            toolTipTitleItem26.Text = "AutoSave";
+            toolTipItem43.Text = "AutoSave is always on. You don\'t have to worry about backups. It\'s always saved.";
+            toolTipItem44.Text = "You can access the files in the Recent Tab in the Backstage.";
+            superToolTip26.Items.Add(toolTipTitleItem26);
+            superToolTip26.Items.Add(toolTipItem43);
+            superToolTip26.Items.Add(toolTipItem44);
+            this.barEditItem1.SuperTip = superToolTip26;
             // 
             // repositoryItemToggleSwitch1
             // 
@@ -535,25 +535,25 @@ namespace windows_theodolite.Views.Windows
             this.passwordEdit.Id = 14;
             this.passwordEdit.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("passwordEdit.ImageOptions.SvgImage")));
             this.passwordEdit.Name = "passwordEdit";
-            toolTipTitleItem6.Text = "Encryption Word";
-            toolTipItem11.Text = "The word to be used to encrypt and decrypt the generated QR Code.";
-            toolTipItem12.Text = "Both computers (the sender and the receiver) should have the same word set to be " +
+            toolTipTitleItem20.Text = "Encryption Word";
+            toolTipItem33.Text = "The word to be used to encrypt and decrypt the generated QR Code.";
+            toolTipItem34.Text = "Both computers (the sender and the receiver) should have the same word set to be " +
     "able to propertly transmit the data.";
-            toolTipItem13.Text = "The data cannot be retrived without the correct encryption word.";
-            toolTipItem14.AllowHtmlText = DevExpress.Utils.DefaultBoolean.True;
-            toolTipItem14.Text = "<b>Do not disclose this data to anyone not involved in the information transmissi" +
+            toolTipItem45.Text = "The data cannot be retrived without the correct encryption word.";
+            toolTipItem46.AllowHtmlText = DevExpress.Utils.DefaultBoolean.True;
+            toolTipItem46.Text = "<b>Do not disclose this data to anyone not involved in the information transmissi" +
     "on.</b>";
-            toolTipItem15.Text = "This should be set up by the weapons officer prior to the beginning of the employ" +
+            toolTipItem47.Text = "This should be set up by the weapons officer prior to the beginning of the employ" +
     "ments and changed often.";
-            superToolTip6.Items.Add(toolTipTitleItem6);
-            superToolTip6.Items.Add(toolTipItem11);
-            superToolTip6.Items.Add(toolTipItem12);
-            superToolTip6.Items.Add(toolTipItem13);
-            superToolTip6.Items.Add(toolTipSeparatorItem5);
-            superToolTip6.Items.Add(toolTipItem14);
-            superToolTip6.Items.Add(toolTipSeparatorItem6);
-            superToolTip6.Items.Add(toolTipItem15);
-            this.passwordEdit.SuperTip = superToolTip6;
+            superToolTip20.Items.Add(toolTipTitleItem20);
+            superToolTip20.Items.Add(toolTipItem33);
+            superToolTip20.Items.Add(toolTipItem34);
+            superToolTip20.Items.Add(toolTipItem45);
+            superToolTip20.Items.Add(toolTipSeparatorItem15);
+            superToolTip20.Items.Add(toolTipItem46);
+            superToolTip20.Items.Add(toolTipSeparatorItem16);
+            superToolTip20.Items.Add(toolTipItem47);
+            this.passwordEdit.SuperTip = superToolTip20;
             this.passwordEdit.EditValueChanged += new System.EventHandler(this.passwordEdit_EditValueChanged);
             // 
             // repositoryItemTextEdit1
@@ -921,11 +921,11 @@ namespace windows_theodolite.Views.Windows
             this.modeEdit.Properties.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.modeEdit.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
             this.modeEdit.Size = new System.Drawing.Size(100, 36);
-            toolTipTitleItem7.Text = "Mode";
-            toolTipItem16.Text = "Select the mode of the next employment.";
-            superToolTip7.Items.Add(toolTipTitleItem7);
-            superToolTip7.Items.Add(toolTipItem16);
-            this.modeEdit.SuperTip = superToolTip7;
+            toolTipTitleItem5.Text = "Mode";
+            toolTipItem9.Text = "Select the mode of the next employment.";
+            superToolTip5.Items.Add(toolTipTitleItem5);
+            superToolTip5.Items.Add(toolTipItem9);
+            this.modeEdit.SuperTip = superToolTip5;
             this.modeEdit.TabIndex = 1;
             this.modeEdit.TabStop = false;
             this.modeEdit.EditValueChanged += new System.EventHandler(this.inputEdit_EditValueChanged);
@@ -942,11 +942,11 @@ namespace windows_theodolite.Views.Windows
             this.secondaryFlagEdit.Properties.Appearance.Options.UseFont = true;
             this.secondaryFlagEdit.Properties.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.secondaryFlagEdit.Size = new System.Drawing.Size(100, 36);
-            toolTipTitleItem8.Text = "Secondary tower";
-            toolTipItem17.Text = "Insert the value observed in the theodolite of the secondary tower.";
-            superToolTip8.Items.Add(toolTipTitleItem8);
-            superToolTip8.Items.Add(toolTipItem17);
-            this.secondaryFlagEdit.SuperTip = superToolTip8;
+            toolTipTitleItem6.Text = "Secondary tower";
+            toolTipItem10.Text = "Insert the value observed in the theodolite of the secondary tower.";
+            superToolTip6.Items.Add(toolTipTitleItem6);
+            superToolTip6.Items.Add(toolTipItem10);
+            this.secondaryFlagEdit.SuperTip = superToolTip6;
             this.secondaryFlagEdit.TabIndex = 2;
             this.secondaryFlagEdit.EditValueChanged += new System.EventHandler(this.inputEdit_EditValueChanged);
             // 
@@ -1007,11 +1007,11 @@ namespace windows_theodolite.Views.Windows
             this.pilotEdit.Properties.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.pilotEdit.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
             this.pilotEdit.Size = new System.Drawing.Size(100, 36);
-            toolTipTitleItem9.Text = "Pilot";
-            toolTipItem18.Text = "Select the pilot about to employ any weapons.";
-            superToolTip9.Items.Add(toolTipTitleItem9);
-            superToolTip9.Items.Add(toolTipItem18);
-            this.pilotEdit.SuperTip = superToolTip9;
+            toolTipTitleItem7.Text = "Pilot";
+            toolTipItem11.Text = "Select the pilot about to employ any weapons.";
+            superToolTip7.Items.Add(toolTipTitleItem7);
+            superToolTip7.Items.Add(toolTipItem11);
+            this.pilotEdit.SuperTip = superToolTip7;
             this.pilotEdit.TabIndex = 0;
             this.pilotEdit.EditValueChanged += new System.EventHandler(this.inputEdit_EditValueChanged);
             // 
@@ -1037,11 +1037,11 @@ namespace windows_theodolite.Views.Windows
             this.hitsEdit.Properties.Appearance.Options.UseFont = true;
             this.hitsEdit.Properties.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.hitsEdit.Size = new System.Drawing.Size(100, 36);
-            toolTipTitleItem10.Text = "Hits";
-            toolTipItem19.Text = "Insert the amount of observed munition hits.";
-            superToolTip10.Items.Add(toolTipTitleItem10);
-            superToolTip10.Items.Add(toolTipItem19);
-            this.hitsEdit.SuperTip = superToolTip10;
+            toolTipTitleItem8.Text = "Hits";
+            toolTipItem12.Text = "Insert the amount of observed munition hits.";
+            superToolTip8.Items.Add(toolTipTitleItem8);
+            superToolTip8.Items.Add(toolTipItem12);
+            this.hitsEdit.SuperTip = superToolTip8;
             this.hitsEdit.TabIndex = 3;
             this.hitsEdit.EditValueChanged += new System.EventHandler(this.inputEdit_EditValueChanged);
             // 
@@ -1065,12 +1065,12 @@ namespace windows_theodolite.Views.Windows
             this.saveButton.Location = new System.Drawing.Point(535, 76);
             this.saveButton.Name = "saveButton";
             this.saveButton.Size = new System.Drawing.Size(100, 30);
-            toolTipTitleItem11.Text = "Save";
-            toolTipItem20.Text = "Adds the employment to the table. You can edit the data directly in the table aft" +
+            toolTipTitleItem9.Text = "Save";
+            toolTipItem13.Text = "Adds the employment to the table. You can edit the data directly in the table aft" +
     "er you press Save.";
-            superToolTip11.Items.Add(toolTipTitleItem11);
-            superToolTip11.Items.Add(toolTipItem20);
-            this.saveButton.SuperTip = superToolTip11;
+            superToolTip9.Items.Add(toolTipTitleItem9);
+            superToolTip9.Items.Add(toolTipItem13);
+            this.saveButton.SuperTip = superToolTip9;
             this.saveButton.TabIndex = 4;
             this.saveButton.Text = "Save";
             this.saveButton.Click += new System.EventHandler(this.saveButton_Click);
@@ -1083,11 +1083,11 @@ namespace windows_theodolite.Views.Windows
             this.clearButton.Location = new System.Drawing.Point(429, 76);
             this.clearButton.Name = "clearButton";
             this.clearButton.Size = new System.Drawing.Size(100, 30);
-            toolTipTitleItem12.Text = "Clear";
-            toolTipItem21.Text = "Clears the inserted data in case the employment was aborted.";
-            superToolTip12.Items.Add(toolTipTitleItem12);
-            superToolTip12.Items.Add(toolTipItem21);
-            this.clearButton.SuperTip = superToolTip12;
+            toolTipTitleItem27.Text = "Clear";
+            toolTipItem14.Text = "Clears the inserted data in case the employment was aborted.";
+            superToolTip27.Items.Add(toolTipTitleItem27);
+            superToolTip27.Items.Add(toolTipItem14);
+            this.clearButton.SuperTip = superToolTip27;
             this.clearButton.TabIndex = 25;
             this.clearButton.TabStop = false;
             this.clearButton.Text = "Clear";
@@ -1104,11 +1104,11 @@ namespace windows_theodolite.Views.Windows
             this.primaryFlagEdit.Properties.Appearance.Options.UseFont = true;
             this.primaryFlagEdit.Properties.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.primaryFlagEdit.Size = new System.Drawing.Size(100, 36);
-            toolTipTitleItem13.Text = "Primary flag";
-            toolTipItem22.Text = "Insert the value observed in the theodolite of the primary tower.";
-            superToolTip13.Items.Add(toolTipTitleItem13);
-            superToolTip13.Items.Add(toolTipItem22);
-            this.primaryFlagEdit.SuperTip = superToolTip13;
+            toolTipTitleItem28.Text = "Primary flag";
+            toolTipItem35.Text = "Insert the value observed in the theodolite of the primary tower.";
+            superToolTip28.Items.Add(toolTipTitleItem28);
+            superToolTip28.Items.Add(toolTipItem35);
+            this.primaryFlagEdit.SuperTip = superToolTip28;
             this.primaryFlagEdit.TabIndex = 1;
             this.primaryFlagEdit.EditValueChanged += new System.EventHandler(this.inputEdit_EditValueChanged);
             // 
@@ -1124,11 +1124,11 @@ namespace windows_theodolite.Views.Windows
             this.headingEdit.Properties.Appearance.Options.UseFont = true;
             this.headingEdit.Properties.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.headingEdit.Size = new System.Drawing.Size(100, 36);
-            toolTipTitleItem14.Text = "Heading";
-            toolTipItem23.Text = "Select the final attack heading of the next employment.";
-            superToolTip14.Items.Add(toolTipTitleItem14);
-            superToolTip14.Items.Add(toolTipItem23);
-            this.headingEdit.SuperTip = superToolTip14;
+            toolTipTitleItem22.Text = "Heading";
+            toolTipItem17.Text = "Select the final attack heading of the next employment.";
+            superToolTip22.Items.Add(toolTipTitleItem22);
+            superToolTip22.Items.Add(toolTipItem17);
+            this.headingEdit.SuperTip = superToolTip22;
             this.headingEdit.TabIndex = 0;
             this.headingEdit.TabStop = false;
             this.headingEdit.EditValueChanged += new System.EventHandler(this.inputEdit_EditValueChanged);
@@ -1168,11 +1168,11 @@ namespace windows_theodolite.Views.Windows
             this.commentsEdit.Properties.Appearance.Options.UseFont = true;
             this.commentsEdit.Properties.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.commentsEdit.Size = new System.Drawing.Size(312, 36);
-            toolTipTitleItem15.Text = "Comments";
-            toolTipItem24.Text = "Insert relevant comments, if any, like fouls or penalties of this employment.";
-            superToolTip15.Items.Add(toolTipTitleItem15);
-            superToolTip15.Items.Add(toolTipItem24);
-            this.commentsEdit.SuperTip = superToolTip15;
+            toolTipTitleItem13.Text = "Comments";
+            toolTipItem18.Text = "Insert relevant comments, if any, like fouls or penalties of this employment.";
+            superToolTip13.Items.Add(toolTipTitleItem13);
+            superToolTip13.Items.Add(toolTipItem18);
+            this.commentsEdit.SuperTip = superToolTip13;
             this.commentsEdit.TabIndex = 27;
             // 
             // labelControl1
@@ -1268,7 +1268,7 @@ namespace windows_theodolite.Views.Windows
             this.Name = "MainForm";
             this.Ribbon = this.ribbon;
             this.StatusBar = this.ribbonStatusBar;
-            this.Text = "Barrica";
+            this.Text = "Barrica - v1.4.0";
             ((System.ComponentModel.ISupportInitialize)(this.ribbon)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.backstage)).EndInit();
             this.backstage.ResumeLayout(false);

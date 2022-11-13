@@ -8,7 +8,7 @@ using System.Runtime.InteropServices;
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("Jean Knapp")]
-[assembly: AssemblyProduct("Air-to-surface Impact Measurer")]
+[assembly: AssemblyProduct("Barrica")]
 [assembly: AssemblyCopyright("Copyright © Jean Knapp 2021-2022")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
