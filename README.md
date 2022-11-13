@@ -1,4 +1,4 @@
-# windows-barrica
+# Barrica
 
 ![promo1](https://user-images.githubusercontent.com/81480122/201533176-6414bc88-7b83-43dd-8d91-bdc587675023.png)
 
