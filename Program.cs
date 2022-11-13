@@ -29,7 +29,7 @@ namespace windows_theodolite
 
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Forms.MainForm());
+            Application.Run(new Views.Windows.MainForm());
         }
     }
 }
